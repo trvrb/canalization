@@ -9,7 +9,7 @@
 \title{\Large \bf Supplementary Information: Canalization of the evolutionary trajectory of the human influenza virus}
 \maketitle
 
-\section*{Supplementary text}
+\section*{Supplementary discussion}
 
 \subsection*{Punctuated antigenic change}
 
@@ -18,6 +18,10 @@ Antigenically similar phenotypes cluster together (Fig.~\ref{incmaptree}B) and a
 Antigenic and epidemiological dynamics show a fundamental linkage, so that large jumps of antigenic phenotype result in increased rates of infection (Fig.~\ref{incmaptree}A and B).  We observe a general correlation between year-to-year antigenic drift and attack rates the following year (corr = 0.27, Fig.~\ref{driftvsinc}A).  Similar patterns have been noted in influenza H3N2 in correlating excess mortality and antigenic evolution \cite{Wu10}.  Additionally, as noted by Koelle et al.\cite{Koelle06}, we commonly observe refractory years after a year of severe incidence brought about by antigenic drift (Fig.~\ref{incmaptree}A).  In general, years with low attack rates follow both unusually severe and unusually mild years (Fig.~\ref{driftvsinc}B).  
 
 Yearly attack rates show significant variation, with an interquartile range across replicates of 0.9\% to 10.9\% in temperate regions and 2.8\% to 10.2\% in the tropics (Fig.~\ref{incmaptree}A).  When antigenic phenotype remains static, there may be multiple consecutive seasons without appreciable incidence, a pattern apparently absent from H3N2 influenza \cite{Finkelman07}.  We suggest that any model exhibiting punctuated evolution broadly consistent with the punctuated change seen in the antigenic map will show similarly varying patterns of incidence.  We can `fix' the incidence patterns, but at the cost of too smooth an antigenic map (Fig.~\ref{incmaptree_smooth}).  Evolutionary patterns of the neuraminidase (NA) protein may provide an explanation.  Epitopes in the HA and NA proteins are jointly responsible for determining antigenicity \cite{Nelson07NatRevGenet}, and it is now clear that levels of adaptive evolution are similar between HA and NA \cite{Bhatt11}.  Thus, changes in NA may be driving incidence patterns as well, resulting in an observed timeseries of incidence partially divorced from the antigenic map of HA.
+
+\subsection*{Short-lived strain-transcending immunity}
+
+It remains a central question as to the extent that short-lived strain-transcending immunity is responsible for influenza's limited diversity and spindly genealogical tree \cite{Ferguson03,Tria05}.  Our findings suggest a possible resolution.  Although lacking short-lived immunity, our model shows a detailed correspondence to both the antigenic map and genealogical tree of H3N2 influenza.  If an antigenic map were to show a deep bifurcation, where two viral lineages move in different antigenic directions, then we would expect the same bifurcation to be evident in the genealogical tree.  Short-lived strain-transcending immunity provides a mechanism by which lineages may diverge in antigenic phenotype, but still interfere with one another.  This mechanism would explain a situation where bifurcations emerge in the antigenic map, but competition results in the extinctions of divergent antigenic lineages.  The empirical antigenic map \cite{Smith04} suggests that this is not the case; one cluster leads to another cluster in orderly succession and there is never competition between two antigenically novel clusters.  This supports the hypothesis that antigenic evolution is primarily limited by a lack of mutational input.  This is not to say that short-lived strain-transcending immunity is not present; observed interference between subtypes \cite{Ferguson03,Goldstein11} provides substantial evidence for its existence.  Instead, we suggest that short-lived strain-transcending immunity does not automatically generate antigenic maps and genealogical trees consistent with empirical evidence.
 
 %%% REFERENCES %%%
 \bibliographystyle{plos2009}
@@ -45,7 +49,17 @@ Yearly attack rates show significant variation, with an interquartile range acro
 
 \pagebreak
 
-%%% Figure S1: incdrift %%%
+%%% Figure S1: phenotypes %%%
+\begin{figure}[H]
+	\centering
+	\includegraphics{figures/phenotypes}
+	\caption{\textbf{Antigenic evolution over the course of the 40-year simulation}. (A) Two-dimensional antigenic phenotypes of 5943 viruses.  Each discrete virus phenotype is shown as a bubble, with bubble area proportional to the number of times this phenotype was sampled. (B) Proportion of virus population comprised of each antigenic cluster through time.  (C) Antigenic distance from initial phenotype ($x=0,y=0$) for each of 5943 virus samples relative to time of virus sampling. In (A) and (C) viruses were sampled at a constant rate proportional to prevalence and coloring was determined by clustering samples on the antigenic map in figure \ref{incmaptree}B.}
+	\label{phenotypes}
+\end{figure}
+
+\pagebreak
+
+%%% Figure S2: incdrift %%%
 \begin{figure}[!c]
 	\centering
 	\includegraphics{figures/driftvsinc}
@@ -77,6 +91,16 @@ Yearly attack rates show significant variation, with an interquartile range acro
 
 \pagebreak
 
+%%% Figure S5: waittimes %%%
+\begin{figure}[!c]
+	\centering
+	\includegraphics{figures/waittimes}
+	\caption{\textbf{Observed vs.\ expected distributions of waiting times between phenotypic mutations along genealogy trunk.} (A) Histogram bins show the observed distribution of waiting times in years across 80 replicate simulations representing 1584 mutations.  The mean of this distribution is 1.76 years.  The dashed line shows the Poisson process expectation of exponentially distributed waiting times.  (B) The discrete distribution of waiting times is transformed into a discrete hazard function, representing the rate of trunk mutation after a specific waiting time.  The dashed line shows the memoryless hazard function of the Poisson process expectation.}
+	\label{waittimes}
+\end{figure}
+
+\pagebreak
+
 %%% Figure S4: 10dgrid %%%
 \begin{figure}[!c]
 	\centering
@@ -89,12 +113,14 @@ Yearly attack rates show significant variation, with an interquartile range acro
 
 \pagebreak
 
-%%% Figure S5: waittimes %%%
+%%% Figure 6: replicateevolfull %%%
 \begin{figure}[!c]
 	\centering
-	\includegraphics{figures/waittimes}
-	\caption{\textbf{Observed vs.\ expected distributions of waiting times between phenotypic mutations along genealogy trunk.} (A) Histogram bins show the observed distribution of waiting times in years across 80 replicate simulations representing 1584 mutations.  The mean of this distribution is 1.76 years.  The dashed line shows the Poisson process expectation of exponentially distributed waiting times.  (B) The discrete distribution of waiting times is transformed into a discrete hazard function, representing the rate of trunk mutation after a specific waiting time.  The dashed line shows the memoryless hazard function of the Poisson process expectation.}
-	\label{waittimes}
+	\makebox[\textwidth]{	
+		\includegraphics{figures/replicateevolfull}
+	}
+	\caption{\textbf{Antigenic phenotypes over the course of 5 years of evolution across 100 replicate simulations starting from identical initial conditions}.  Replicate simulations were initialized with the end state of the original 40-year simulation shown in figure \ref{incmaptree}.  The top left panel shows every antigenic phenotype present in the initial virus population.  The black point represents the population mean.  Each subsequent panel shows an additional year of evolution, with black points representing the mean antigenic phenotypes of the 100 replicate simulations and gray lines representing the history of each mean antigenic phenotype.}
+	\label{replicateevolfull}
 \end{figure}
 
 \pagebreak
@@ -105,9 +131,11 @@ Yearly attack rates show significant variation, with an interquartile range acro
 	\makebox[\textwidth]{
 		\includegraphics{figures/replicatetimeseries}
 	}
-	\caption{\textbf{Timeseries of incidence across 100 replicate simulations with identical initial conditions.} Panels show incidence in the North, Tropics and South regions over the course of 10 years.  Solid black lines represent the median weekly incidence across the 100 replicate simulations, while gray intervals represent the interquartile range across simulations.  There is little variability for the first year of replicate simulations.  Replicate simulations were initialized with the end state of the original 40-year simulation shown in figures ~\ref{incmaptree}--\ref{immunity}.}
+	\caption{\textbf{Timeseries of incidence across 100 replicate simulations with identical initial conditions.} Panels show incidence in the North, Tropics and South regions over the course of 10 years.  Solid black lines represent the median weekly incidence across the 100 replicate simulations, while gray intervals represent the interquartile range across simulations.  There is little variability for the first year of replicate simulations.  Replicate simulations were initialized with the end state of the original 40-year simulation shown in figure \ref{incmaptree}.}
 	\label{replicatetimeseries}
 \end{figure}
+
+\pagebreak
 
 %%% Figure S7: incmaptree_smooth %%%
 \begin{figure}[!c]
@@ -118,6 +146,8 @@ Yearly attack rates show significant variation, with an interquartile range acro
 	\caption{\textbf{Simulation results showing epidemiological, antigenic and genealogical dynamics for `smoother' mutation model}. (A) Weekly timeseries of incidence of viral infection in north and tropics regions. (B) Antigenic map depicting phenotypes of viruses sampled over the course of the simulation.  Grid lines show single units of antigenic distance. (C) Genealogical tree depicting the infection history of samples from the virus population.  Cluster assignments were used to color panels (A), (B) and (C) in a consistent fashion.  Alternative mutational parameters are $\mu = 3 \times 10^{-4}$, mean mutation size of 0.6 units and standard deviation of mutation size of 0.2 units.}
 	\label{incmaptree_smooth}
 \end{figure}
+
+\pagebreak
 
 %%% Figure S8: incmaptree_rough %%%
 \begin{figure}[!c]
