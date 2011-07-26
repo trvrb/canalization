@@ -1,0 +1,75 @@
+% Main results are from gamma-24, parameter exploration in smooth and bumpy-10
+
+\documentclass[11pt,oneside,letterpaper]{article}
+
+% graphicx package, useful for including eps and pdf graphics
+% include graphics with the command \includegraphics
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+% cite package, to clean up citations in the main text. Do not remove.
+\usepackage{cite}
+\renewcommand\refname{}
+\usepackage{chapterbib}
+
+\renewcommand\abstractname{}
+
+\usepackage{color} 
+
+\usepackage{parskip}
+
+% Use doublespacing - comment out for single spacing
+%\usepackage{setspace} 
+%\doublespacing
+
+% Text layout
+\usepackage{geometry}
+\geometry{textwidth=15cm} % 16cm for PLoS
+\geometry{textheight=22cm}
+
+% Bold the 'Figure #' in the caption and separate it with a period
+% Captions will be left justified
+%\usepackage[labelfont=bf,labelsep=period,font=doublespacing]{caption}
+\usepackage[labelfont=bf,labelsep=period,font=small]{caption}
+
+\usepackage{float}
+
+% Remove brackets from numbering in List of References
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+
+\usepackage{authblk}
+\renewcommand\Authands{ \& }
+\renewcommand\Authfont{\normalsize}
+\renewcommand\Affilfont{\small}
+
+% comments
+%\usepackage{ulem}
+%\definecolor{purple}{rgb}{0.459,0.109,0.538}
+%\def\tb#1#2{\sout{#1} \textcolor{purple}{#2}} 
+%\def\tbc#1{\textcolor{purple}{[#1]}}
+%\definecolor{blue}{rgb}{0.324,0.609,0.708}
+%\def\ar#1#2{\sout{#1} \textcolor{blue}{#2}} 
+%\def\arc#1{\textcolor{blue}{[#1]}}
+%\definecolor{green}{rgb}{0.513,0.73,0.442} 
+%\def\mp#1#2{\sout{#1} \textcolor{green}{#2}} 
+%\def\mpc#1{\textcolor{green}{[#1]}}
+
+\author[1,2,*]{Trevor Bedford}
+\author[3,4]{Andrew Rambaut}
+\author[1,2]{Mercedes Pascual}
+\affil[1]{Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, USA.} 
+\affil[2]{Howard Hughes Medical Institute, University of Michigan, Ann Arbor, MI, USA.}
+\affil[3]{Institute of Evolutionary Biology, University of Edinburgh, Edinburgh, UK.}
+\affil[4]{Fogarty International Center, National Institutes of Health, Bethesda, MD, USA.}
+\affil[*]{To whom correspondence should be addressed. E-mail: bedfordt@umich.edu}
+\date{\normalsize \today}
+
+%\includeonly{canalms}
+%\includeonly{canalsi}
+\begin{document}
+\include{canalms}
+\include{canalmethods}
+\include{canalsi}
+\end{document}
