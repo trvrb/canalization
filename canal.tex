@@ -15,7 +15,6 @@
 \renewcommand\abstractname{}
 
 \usepackage{color} 
-
 \usepackage{parskip}
 
 % Use doublespacing - comment out for single spacing
@@ -27,10 +26,15 @@
 \geometry{textwidth=15cm} % 16cm for PLoS
 \geometry{textheight=22cm}
 
+% Helps to keep figures from being orphaned on a page by themselves
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+
 % Bold the 'Figure #' in the caption and separate it with a period
 % Captions will be left justified
-%\usepackage[labelfont=bf,labelsep=period,font=doublespacing]{caption}
-\usepackage[labelfont=bf,labelsep=period,font=small]{caption}
+\usepackage{caption}
+\DeclareCaptionLabelFormat{number}{#2}
+\captionsetup{labelfont=bf,labelsep=period,font=small,labelformat=number}
 
 \usepackage{float}
 
