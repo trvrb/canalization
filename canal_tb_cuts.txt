@@ -24,8 +24,6 @@ These low abundance phenotypes form clouds around the high abundance phenotypes 
 
 In the absence of selection on antigenic phenotype, movement would be more random and a less than linear increase in antigenic distance would be seen through time \cite{Bedford09}. 
 
-Evolution via many smaller mutations results in a smoother antigenic map and less variation in yearly epidemics (Fig.~\ref{incmaptree_smooth}), while evolution via rare mutations of large effect exhibits a more clustered antigenic map and wider variation in seasonal incidence (Fig.~\ref{incmaptree_rough}).
-
 # Genealogical #
 
 We find that diversity commonly increases during periods of relative evolutionary stasis and contracts during periods of antigenic movement (\ref{incmaptree}C).

@@ -1,23 +1,26 @@
 \setcounter{figure}{0}
 \setcounter{table}{0}
 \setcounter{page}{1}
-\renewcommand{\thefigure}{Supp.~Fig.~\arabic{figure}}
-\renewcommand{\thetable}{Supp.~Table~\arabic{table}}
+\renewcommand{\thefigure}{Supplementary Fig.~\arabic{figure}}
+\renewcommand{\thetable}{Supplementary Table~\arabic{table}}
 \renewcommand{\thepage}{S\arabic{page}}
   
 %%% TITLE %%%
-\title{\Large \bf Supplementary Information: Canalization of the evolutionary trajectory of the human influenza virus}
+\title{\huge \bf Supplementary Information:\\ \vspace{0.5cm} \Large Canalization of the evolutionary trajectory of the human influenza virus}
 \maketitle
 
-\section*{Supplementary methods}
+\section*{Supplementary Methods}
 
 \subsection*{Parameter selection and sensitivity analysis}
 
-Estimating what the basic reproductive number $R_0$ for seasonal influenza would be in a naive population is notoriously difficult.  Season-to-season estimates of effective reproductive number $R$ for the USA and France gathered from mortality timeseries display an interquartile range of 0.9--1.8 \cite{Chowell08}.  Geographic spread within the USA suggests an average seasonal $R$ of 1.35 \cite{Viboud06}.  These estimates of $R$ will be lower than the $R_0$ of influenza due to the effects of human immunity.  We assumed $R_0$ of 1.8, consistent with the upper range of seasonal estimates.  Duration of infection was chosen based on patterns of viral shedding shown during challenge studies \cite{Carrat08}.  The linear form of the risk of infection and its increase as a function of antigenic distance $s$ was chosen as 0.07 based on experimental work on equine influenza \cite{Park09} and from studies of vaccine effectiveness \cite{Gupta06}.  Between-region contact rate $m$ was chosen to yield a trunk lineage that resides predominantly in the tropics.  With much higher rates of mixing, the trunk lineage ceases to show a preference the tropics, and with much lower rates of mixing, particular seasons in the north and the south will often be skipped.  The amplitude of seasonal forcing $\epsilon$ was chosen to be just large enough to get consistent fade-outs in the summer months.
+Estimating what the basic reproductive number $R_0$ for seasonal influenza would be in a naive population is notoriously difficult.  Season-to-season estimates of effective reproductive number $R$ for the USA and France gathered from mortality timeseries display an interquartile range of 0.9--1.8 \citesupp{Chowell08}.  Geographic spread within the USA suggests an average seasonal $R$ of 1.35 \citesupp{Viboud06}.  These estimates of $R$ will be lower than the $R_0$ of influenza due to the effects of human immunity.  We assumed $R_0$ of 1.8, consistent with the upper range of seasonal estimates.  Duration of infection was chosen based on patterns of viral shedding shown during challenge studies \citesupp{Carrat08}.  The linear form of the risk of infection and its increase as a function of antigenic distance $s$ was chosen as 0.07 based on experimental work on equine influenza \citesupp{Park09} and from studies of vaccine effectiveness \citesupp{Gupta06}.  Between-region contact rate $m$ was chosen to yield a trunk lineage that resides predominantly in the tropics.  With much higher rates of mixing, the trunk lineage ceases to show a preference the tropics, and with much lower rates of mixing, particular seasons in the north and the south will often be skipped.  The amplitude of seasonal forcing $\epsilon$ was chosen to be just large enough to get consistent fade-outs in the summer months.
 
-Mutational parameters were based, in part, on model behavior.  We assumed 10 amino acid sites involved in antigenicity, each mutating at a rate of $10^{-5}$ \cite{Rambaut08} to give a phenotypic mutation rate $\mu = 10^{-4}$ per infection per day.  We chose mutational effect parameters (mean = 0.6, sd = 0.4) that would give suitably fast rates of antigenic evolution corresponding to approximately 1.2 units of antigenic change per year, while simultaneously giving clustered patterns of antigenic evolution  \cite{Smith04}.  Similar outcomes are possible under a variety of parameterizations.  If mutations are more common ($\mu = 3 \times 10^{-4}$) and show less variation in effect size (mean = 0.6, sd = 0.2), then antigenic drift occurs in a more continuous fashion, resulting in less variation in seasonal incidence and a smoother distribution of antigenic phenotypes (\ref{incmaptree_smooth}).  If mutations are less common ($\mu = 5 \times 10^{-5}$) and show more variance in effect (mean = 0.7, sd = 0.5), then antigenic change occurs in a more punctuated fashion (\ref{incmaptree_rough}).  Basic reproductive number $R_0$ can be traded off with mutational parameters to some extent.  Less mutational input and higher $R_0$ will give similar patterns of antigenic drift and seasonal incidence.  Similarly, Kucharski and Gog \cite{Kucharski11} find that increasing $R_0$ results in increased rates of emergence of antigenically novel strains.
+Mutational parameters were based, in part, on model behavior.  We assumed 10 amino acid sites involved in antigenicity, each mutating at a rate of $10^{-5}$ 
+%\cite{Rambaut08} 
+[12]
+to give a phenotypic mutation rate $\mu = 10^{-4}$ per infection per day.  We chose mutational effect parameters (mean = 0.6, sd = 0.4) that would give suitably fast rates of antigenic evolution corresponding to approximately 1.2 units of antigenic change per year, while simultaneously giving clustered patterns of antigenic evolution  \cite{Smith04}.  Similar outcomes are possible under a variety of parameterizations.  If mutations are more common ($\mu = 3 \times 10^{-4}$) and show less variation in effect size (mean = 0.6, sd = 0.2), then antigenic drift occurs in a more continuous fashion, resulting in less variation in seasonal incidence and a smoother distribution of antigenic phenotypes (\ref{incmaptree_smooth}).  If mutations are less common ($\mu = 5 \times 10^{-5}$) and show more variance in effect (mean = 0.7, sd = 0.5), then antigenic change occurs in a more punctuated fashion (\ref{incmaptree_rough}).  Basic reproductive number $R_0$ can be traded off with mutational parameters to some extent.  Less mutational input and higher $R_0$ will give similar patterns of antigenic drift and seasonal incidence.  Similarly, Kucharski and Gog \citesupp{Kucharski11} find that increasing $R_0$ results in increased rates of emergence of antigenically novel strains.
 
-In 20 out of the 100 replicate simulations, we observed a major bifurcation of antigenic phenotype and a consequent increase in incidence and genealogical diversity.  These simulations were removed from the analysis.   Similar to Koelle et al. \cite{Koelle11}, we assume that although the historical evolution of H3N2 influenza followed the path of a single lineage, it could have included a major bifurcation.  Further work in these directions will help to determine the likelihoods of single lineage vs.\ bifurcating scenarios.
+In 20 out of the 100 replicate simulations, we observed a major bifurcation of antigenic phenotype and a consequent increase in incidence and genealogical diversity.  These simulations were removed from the analysis.   Similar to Koelle et al. \citesupp{Koelle11}, we assume that although the historical evolution of H3N2 influenza followed the path of a single lineage, it could have included a major bifurcation.  Further work in these directions will help to determine the likelihoods of single lineage vs.\ bifurcating scenarios.
 
 \subsection*{Antigenic map}
 
@@ -25,13 +28,13 @@ Antigenic phenotypes are modeled as discrete entities on the Euclidean plane; mu
 
 We added noise to each of the 5943 sampled viruses in this fashion resulting in an approximated antigenic map (\ref{incmaptree}B).  Virus samples were then clustering following standard clustering algorithms.  We tried clustering by the $k$-means algorithm and also agglomerative hierarchical clustering with a variety of linkage criterion.  We found that clustering by Ward's criterion consistently outperformed other methods, when measured in terms of within-cluster and between-cluster variances.  However, the exact clustering algorithm had little effect on our overall results.
 
-\section*{Supplementary discussion}
+\section*{Supplementary Discussion}
 
 \subsection*{Punctuated antigenic change}
 
-Over the  40-year simulation, antigenic drift moves the virus population at an average rate across replicates of 1.05 antigenic units per year (interquartile range 0.96--1.14).  However, antigenic evolution occurs in a punctuated fashion; periods of relative stasis are interspersed with more rapid antigenic change (\ref{phenotypes}C).  Large discontinuities in antigenic phenotype frequently correspond to cluster transition events.  Antigenic and epidemiological dynamics show a fundamental linkage, so that large jumps of antigenic phenotype result in increased rates of infection (\ref{incmaptree}A and B).  We observe a general correlation between year-to-year antigenic drift and attack rates the following year (corr = 0.27, \ref{driftvsinc}A).  Similar patterns have been noted in influenza H3N2 in correlating excess mortality and antigenic evolution \cite{Wu10}.  Additionally, as noted by Koelle et al.\cite{Koelle06}, we commonly observe refractory years after years of severe incidence brought about by antigenic drift (\ref{incmaptree}A).  In general, years with low attack rates follow both unusually severe and unusually mild years (\ref{driftvsinc}B).  
+Over the  40-year simulation, antigenic drift moves the virus population at an average rate across replicates of 1.05 antigenic units per year (interquartile range 0.96--1.14).  However, antigenic evolution occurs in a punctuated fashion; periods of relative stasis are interspersed with more rapid antigenic change (\ref{phenotypes}C).  Large discontinuities in antigenic phenotype frequently correspond to cluster transition events.  Antigenic and epidemiological dynamics show a fundamental linkage, so that large jumps of antigenic phenotype result in increased rates of infection (\ref{incmaptree}A and B).  We observe a general correlation between year-to-year antigenic drift and attack rates the following year (corr = 0.27, \ref{driftvsinc}A).  Similar patterns have been noted in influenza H3N2 in correlating excess mortality and antigenic evolution \citesupp{Wu10}.  Additionally, as noted by Koelle et al.\cite{Koelle06}, we commonly observe refractory years after years of severe incidence brought about by antigenic drift (\ref{incmaptree}A).  In general, years with low attack rates follow both unusually severe and unusually mild years (\ref{driftvsinc}B).  
 
-Yearly attack rates show significant variation, with an interquartile range across replicates of 0.9\% to 10.9\% in temperate regions and 2.8\% to 10.2\% in the tropics (\ref{incmaptree}A).  When antigenic phenotype remains static, there may be multiple consecutive seasons without appreciable incidence, a pattern apparently absent from H3N2 influenza \cite{Finkelman07}.  We suggest that any model exhibiting punctuated evolution broadly consistent with the punctuated change seen in the antigenic map will show similar patterns of incidence.  We can `fix' the incidence patterns, but at the cost of too smooth an antigenic map (\ref{incmaptree_smooth}).  Evolutionary patterns of the neuraminidase (NA) protein may provide an explanation.  Epitopes in the HA and NA proteins are jointly responsible for determining antigenicity \cite{Nelson07NatRevGenet}, and it is now clear that levels of adaptive evolution are similar between HA and NA \cite{Bhatt11}.  Thus, changes in NA may be driving incidence patterns as well, resulting in an observed timeseries of incidence partially divorced from the antigenic map of HA.
+Yearly attack rates show significant variation, with an interquartile range across replicates of 0.9\% to 10.9\% in temperate regions and 2.8\% to 10.2\% in the tropics (\ref{incmaptree}A).  When antigenic phenotype remains static, there may be multiple consecutive seasons without appreciable incidence, a pattern apparently absent from H3N2 influenza \citesupp{Finkelman07}.  We suggest that any model exhibiting punctuated evolution broadly consistent with the punctuated change seen in the antigenic map will show similar patterns of incidence.  We can `fix' the incidence patterns, but at the cost of too smooth an antigenic map (\ref{incmaptree_smooth}).  Evolutionary patterns of the neuraminidase (NA) protein may provide an explanation.  Epitopes in the HA and NA proteins are jointly responsible for determining antigenicity \cite{Nelson07NatRevGenet}, and it is now clear that levels of adaptive evolution are similar between HA and NA \citesupp{Bhatt11}.  Thus, changes in NA may be driving incidence patterns as well, resulting in an observed timeseries of incidence partially divorced from the antigenic map of HA.
 
 \subsection*{Migration patterns}
 
@@ -39,11 +42,11 @@ We find large differences in the migration patterns of persistent trunk lineages
 
 \subsection*{Short-lived strain-transcending immunity}
 
-It remains a central question as to the extent that short-lived strain-transcending immunity is responsible for influenza's limited diversity and spindly genealogical tree \cite{Ferguson03,Tria05}.  Our findings suggest a possible resolution.  Although lacking short-lived immunity, our model shows a detailed correspondence to both the antigenic map and genealogical tree of H3N2 influenza.  If an antigenic map were to show a deep bifurcation, where two viral lineages move in different antigenic directions, then we would expect the same bifurcation to be evident in the genealogical tree.  Short-lived strain-transcending immunity provides a mechanism by which lineages may diverge in antigenic phenotype, but still show epidemiological interference.  This mechanism would explain a situation where bifurcations emerge in the antigenic map, but competition results in the extinction of divergent antigenic lineages.  The empirical antigenic map \cite{Smith04} suggests that this is not the case; one cluster leads to another cluster in orderly succession and there is never competition between two antigenically novel clusters.  This supports the hypothesis that antigenic evolution is primarily limited by a lack of mutational input.  This is not to say that short-lived strain-transcending immunity is not present; observed interference between subtypes \cite{Ferguson03,Goldstein11} provides substantial evidence for its existence.  Instead, we suggest that short-lived strain-transcending immunity does not automatically generate antigenic maps and genealogical trees consistent with empirical evidence.
+It remains a central question as to the extent that short-lived strain-transcending immunity is responsible for influenza's limited diversity and spindly genealogical tree \cite{Ferguson03,Tria05}.  Our findings suggest a possible resolution.  Although lacking short-lived immunity, our model shows a detailed correspondence to both the antigenic map and genealogical tree of H3N2 influenza.  If an antigenic map were to show a deep bifurcation, where two viral lineages move in different antigenic directions, then we would expect the same bifurcation to be evident in the genealogical tree.  Short-lived strain-transcending immunity provides a mechanism by which lineages may diverge in antigenic phenotype, but still show epidemiological interference.  This mechanism would explain a situation where bifurcations emerge in the antigenic map, but competition results in the extinction of divergent antigenic lineages.  The empirical antigenic map \cite{Smith04} suggests that this is not the case; one cluster leads to another cluster in orderly succession and there is never competition between two antigenically novel clusters.  This supports the hypothesis that antigenic evolution is primarily limited by a lack of mutational input.  This is not to say that short-lived strain-transcending immunity is not present; observed interference between subtypes \cite{Ferguson03}$^,$ \cite{Goldstein11} provides substantial evidence for its existence.  Instead, we suggest that short-lived strain-transcending immunity does not automatically generate antigenic maps and genealogical trees consistent with empirical evidence.
 
 %%% REFERENCES %%%
-\bibliographystyle{plos2009}
-\bibliography{/Users/bedfordt/Documents/bedford}
+\bibliographystylesupp{naturemag}
+\bibliographysupp{/Users/bedfordt/Documents/bedford}
 
 \vspace{1cm}
 
@@ -83,6 +86,30 @@ It remains a central question as to the extent that short-lived strain-transcend
 	\includegraphics{figures/driftvsinc}
 	\caption{\textbf{Correlation between antigenic drift and attack rate and autocorrelation of attack rate}. (A) Antigenic drift measured as the distance between the centroid of phenotypes at year $t$ and the centroid of phenotypes at year $t+1$ vs.\ annual attack rate at year $t+1$. (B) Temperate attack rate at year $t$ vs.\ temperate attack rate at year $t+1$. In both cases, measurements are taken across replicate simulations and individual pairs of measurements are shown as gray points and a locally-linear regression (LOESS) as black dashed line.}
 	\label{driftvsinc}
+\end{figure}
+
+\pagebreak
+
+%%% Figure S7: incmaptree_smooth %%%
+\begin{figure}[!c]
+	\centering
+	\makebox[\textwidth]{
+		\includegraphics{figures/incmaptree_smooth}
+	}
+	\caption{\textbf{Simulation results showing epidemiological, antigenic and genealogical dynamics for `smoother' mutation model}. (A) Weekly timeseries of incidence of viral infection in north and tropics regions. (B) Antigenic map depicting phenotypes of viruses sampled over the course of the simulation.  Grid lines show single units of antigenic distance. (C) Genealogical tree depicting the infection history of samples from the virus population.  Cluster assignments were used to color panels (A), (B) and (C) in a consistent fashion.  Alternative mutational parameters are $\mu = 3 \times 10^{-4}$, mean mutation size of 0.6 units and standard deviation of mutation size of 0.2 units.}
+	\label{incmaptree_smooth}
+\end{figure}
+
+\pagebreak
+
+%%% Figure S8: incmaptree_rough %%%
+\begin{figure}[!c]
+	\centering
+	\makebox[\textwidth]{
+		\includegraphics{figures/incmaptree_rough}
+	}
+	\caption{\textbf{Simulation results showing epidemiological, antigenic and genealogical dynamics for `rougher' mutation model}. (A) Weekly timeseries of incidence of viral infection in north and tropics regions. (B) Antigenic map depicting phenotypes of viruses sampled over the course of the simulation.  Grid lines show single units of antigenic distance. (C) Genealogical tree depicting the infection history of samples from the virus population.  Cluster assignments were used to color panels (A), (B) and (C) in a consistent fashion.  Alternative mutational parameters are $\mu = 5 \times 10^{-5}$, mean mutation size of 0.7 units and standard deviation of mutation size of 0.5 units.}
+	\label{incmaptree_rough}
 \end{figure}
 
 \pagebreak
@@ -147,7 +174,7 @@ It remains a central question as to the extent that short-lived strain-transcend
 \begin{figure}[!c]
 	\centering
 	\makebox[\textwidth]{	
-		\includegraphics{figures/10dgrid}
+		\includegraphics[width=0.9\textwidth]{figures/10dgrid}
 	}
 	\caption{\textbf{Principal components of antigenic variation under a 10-sphere mutation model}. Each panel shows approximately 6000 samples of antigenic phenotype over the course of a 40-year simulation.  Each phenotype is represented as a bubble, with bubble area proportional to the number of samples with this phenotype.  Bubbles are colored based on clustering the 10-dimensional antigenic phenotypes.  The original 10-dimensional space was rotated using principal components analysis to give orthogonal axes in the order of their contribution to antigenic variation.  Each panel shows a two-dimensional slice of the this rotated space.  Principal components 7--10 were left out of the figure for clarity.}
 	\label{10dgrid}
@@ -165,26 +192,4 @@ It remains a central question as to the extent that short-lived strain-transcend
 	\label{replicatetimeseries}
 \end{figure}
 
-\pagebreak
 
-%%% Figure S7: incmaptree_smooth %%%
-\begin{figure}[!c]
-	\centering
-	\makebox[\textwidth]{
-		\includegraphics{figures/incmaptree_smooth}
-	}
-	\caption{\textbf{Simulation results showing epidemiological, antigenic and genealogical dynamics for `smoother' mutation model}. (A) Weekly timeseries of incidence of viral infection in north and tropics regions. (B) Antigenic map depicting phenotypes of viruses sampled over the course of the simulation.  Grid lines show single units of antigenic distance. (C) Genealogical tree depicting the infection history of samples from the virus population.  Cluster assignments were used to color panels (A), (B) and (C) in a consistent fashion.  Alternative mutational parameters are $\mu = 3 \times 10^{-4}$, mean mutation size of 0.6 units and standard deviation of mutation size of 0.2 units.}
-	\label{incmaptree_smooth}
-\end{figure}
-
-\pagebreak
-
-%%% Figure S8: incmaptree_rough %%%
-\begin{figure}[!c]
-	\centering
-	\makebox[\textwidth]{
-		\includegraphics{figures/incmaptree_rough}
-	}
-	\caption{\textbf{Simulation results showing epidemiological, antigenic and genealogical dynamics for `rougher' mutation model}. (A) Weekly timeseries of incidence of viral infection in north and tropics regions. (B) Antigenic map depicting phenotypes of viruses sampled over the course of the simulation.  Grid lines show single units of antigenic distance. (C) Genealogical tree depicting the infection history of samples from the virus population.  Cluster assignments were used to color panels (A), (B) and (C) in a consistent fashion.  Alternative mutational parameters are $\mu = 5 \times 10^{-5}$, mean mutation size of 0.7 units and standard deviation of mutation size of 0.5 units.}
-	\label{incmaptree_rough}
-\end{figure}
