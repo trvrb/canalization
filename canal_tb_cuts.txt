@@ -1,3 +1,7 @@
+# Abstract #
+
+This work seeks to simultaneously model epidemiological, antigenic, genealogical and geographic patterns of the influenza virus.
+
 # Introduction #
 
 Influenza A (H3N2) has continually circulated within the human population since its introduction in 1968, exhibiting recurrent seasonal epidemics in temperate regions and less periodic transmission in the tropics.  Annual winter epidemics of H3N2 influenza show average cumulative attack rates of 3--8\% \cite{Monto93,Koelle09}. 
@@ -13,6 +17,8 @@ After a host recovers from an infection, the phenotype of the infecting virus is
 Virus strains possessing antigenically novel phenotypes will have a transmission advantage compared to strains whose phenotypes are more similar to phenotypes present in host immune histories.
 
 This avoids the messy intermediate step of phylogenetic inference common to phylodynamic simulations, and allows large genealogies to be reconstructed quickly and without error.
+
+This technique side-steps the process of phylogenetic reconstruction, recovering genealogies quickly and accurately. 
 
 # Antigenic and epidemiological #
 
