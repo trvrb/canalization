@@ -1,4 +1,9 @@
+
 # Abstract #
+
+Influenza A (H3N2) has persisted in the human population through recurrent seasonal epidemics since 1968.  Over this time, the influenza virus has undergone persistent antigenic drift, allowing it to infect a substantial fraction of the human population year after year.
+
+Understanding the process of antigenic evolution is key to our efforts for disease control and surveillance; the continual emergence of new antigenic variants requires corresponding updates to the influenza vaccine.  
 
 This work seeks to simultaneously model epidemiological, antigenic, genealogical and geographic patterns of the influenza virus.
 
@@ -30,11 +35,11 @@ These low abundance phenotypes form clouds around the high abundance phenotypes 
 
 In the absence of selection on antigenic phenotype, movement would be more random and a less than linear increase in antigenic distance would be seen through time \cite{Bedford09}. 
 
+Over the  40-year simulation, antigenic drift moves the virus population at an average rate across replicates of 1.05 antigenic units per year (interquartile range 0.96--1.14).  However, antigenic evolution occurs in a punctuated fashion; periods of relative stasis are interspersed with more rapid antigenic change (\ref{phenotypes}B).  Large discontinuities in antigenic phenotype frequently correspond to cluster transition events.    We observe a general correlation between year-to-year antigenic drift and attack rates the following year (corr = 0.27, \ref{driftvsinc}A).  Similar patterns have been noted in influenza H3N2 in correlating excess mortality and antigenic evolution \cite{Wu10}.  Additionally, as noted by Koelle et al.\cite{Koelle06}, we commonly observe refractory years after years of severe incidence brought about by antigenic drift (\ref{evol}A).  In general, years with low attack rates follow both unusually severe and unusually mild years (\ref{driftvsinc}B).  
+
 # Genealogical #
 
 We find that diversity commonly increases during periods of relative evolutionary stasis and contracts during periods of antigenic movement (\ref{incmaptree}C).
-
-In general, strong selective pressure results in rapid antigenic drift and reduced effective population size \cite{BedfordBMC11}.
 
 Selective pressures can be examined by comparing which mutations fix, i.e.\ are incorporated into the progenitor trunk lineage, and which mutations are lost, i.e.\ incorporated into side branches bound for extinction.  This approach has shown that, in influenza A (H3N2), natural selection promotes mutations to epitope sites in the HA1 region \cite{Bush99MBE,Wolf06,Bhatt11}.
 
@@ -83,6 +88,10 @@ In the initial virus population, there are 5 novel antigenic variants present wi
 The following year (year 2) appears refractory, showing low northern hemisphere incidence.
 
 After 4 years of evolution, replicate simulations show abundant variation in evolutionary trajectory, but in each case there has been movement away from past phenotype, consistent with evolutionary canalization.
+
+# Methods summary #
+
+To characterize the joint epidemiological, genealogical, antigenic and geographic patterns of influenza, we implemented a large-scale individual-based model.  This model consists of daily time steps, in which the states of hosts and viruses are updated.  Hosts may be born, may die, may contact other hosts allowing viral transmission, or may recover from infection.  Viruses may mutate in antigenic phenotype.
 
 # Methods #
 
