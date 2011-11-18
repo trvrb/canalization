@@ -2,15 +2,27 @@
 \renewcommand{\thetable}{Table~\arabic{table}}
 
 %%% TITLE %%%
-\title{\Large \bf Canalization of the evolutionary trajectory of the human influenza virus}
+\title{\vspace{1.5cm} \LARGE \bf Canalization of the evolutionary trajectory of the human influenza virus}
 \maketitle
 
+% Short title: Evolutionary canalization of influenza
+
 \begin{abstract}
-\bf \noindent Since its emergence in 1968, influenza A (H3N2) has evolved extensively in genotype and antigenic phenotype.  Antigenic evolution occurs in the context of a two-dimensional `antigenic map', while genetic evolution shows a characteristic ladder-like genealogical tree.  Here, we use a large-scale individual-based model to show that evolution in a Euclidean antigenic space provides a remarkable correspondence between model behavior and the epidemiological, antigenic, genealogical and geographic patterns observed in influenza virus.  We find that evolution away from existing human immunity results in rapid population turnover in the influenza virus and that this population turnover occurs primarily along a single antigenic axis.  Thus, selective dynamics induce a canalized evolutionary trajectory, in which the evolutionary fate of the influenza population is surprisingly repeatable and hence, in theory, predictable.
+\begin{center}
+\bf \normalsize Abstract
+\end{center}
+
+\vspace{0.5cm}
+
+\noindent \normalsize Since its emergence in 1968, influenza A (H3N2) has evolved extensively in genotype and antigenic phenotype.  Antigenic evolution occurs in the context of a two-dimensional `antigenic map', while genetic evolution shows a characteristic ladder-like genealogical tree.  Here, we use a large-scale individual-based model to show that evolution in a Euclidean antigenic space provides a remarkable correspondence between model behavior and the epidemiological, antigenic, genealogical and geographic patterns observed in influenza virus.  We find that evolution away from existing human immunity results in rapid population turnover in the influenza virus and that this population turnover occurs primarily along a single antigenic axis.  Thus, selective dynamics induce a canalized evolutionary trajectory, in which the evolutionary fate of the influenza population is surprisingly repeatable and hence, in theory, predictable.
 \end{abstract}
 
 \vspace{0.5cm}
-%\pagebreak
+\pagebreak
+
+\section*{Author Summary}
+
+Each year, hundreds of millions become sick with the influenza virus and hundreds of thousands die from the infection.  After recovery from the flu, a person gains permanent immunity specific to the infecting strain.  However, owing to its RNA makeup, mutations occur rapidly to the virus genome.  Some of these mutations change the shape of proteins visible to the human immune system, and thus alter the virus's antigenic phenotype.  These mutations allow the virus to re-infect those who have previously recovered from an earlier strain, and thus will quickly spread through the virus population.  It is because of influenza's rapid antigenic evolution that the flu vaccine needs frequent updating.  However, despite strong pressure to evolve away from human immunity and to diversify in antigenic phenotype, influenza, and especially influenza A (H3N2), shows paradoxically limited genetic and antigenic diversity present at any one time.  Here, we propose a simple model of influenza that displays rapid evolution but low standing diversity and simultaneously accounts for the epidemiological, genetic, antigenic and geographical patterns displayed by the virus.  We find that in evolving directly away from existing human immunity, the virus severely limits its future evolutionary potential.
 
 \section*{Introduction}
 
@@ -20,7 +32,7 @@ This observation has remained puzzling from an epidemiological standpoint.  Anti
 
 Experimental characterization of antigenic phenotype is possible through the hemagglutination inhibition (HI) assay, which measures the cross-reactivity of HA from one virus strain to serum raised against another strain \cite{Hirst43}.  The results of many HI assays can be combined to yield a two-dimensional map, representing antigenic similarity and distance between strains as an easily visualized and quantified measure \cite{Smith04}.  The path traced across this map by influenza A (H3N2) from 1968 until present is largely linear, showing serial replacement of one strain by another; there are no major bifurcations of antigenic phenotype \cite{Smith04}.
 
-Herein, we seek to simultaneously model the genetic and antigenic evolution of the influenza virus.  We begin with the finding of Smith et al.\ \cite{Smith04}, that a two-dimensional map adequately explains observed antigenic distance between strains.  In an analogous fashion, we represent antigenic phenotypes as points on a plane.  After exposure to a virus, a host's risk of infection is proportional to the Euclidean distance between the infecting phenotype and the closest phenotype in the host's immune history.  Mutations perturb antigenic phenotype, moving phenotype in a random radial direction and for a randomly distributed distance.  We implemented this geometrical model in a large-scale individual-based simulation intended to directly model the antigenic map and genealogical tree of the global influenza population.  The simulation includes multiple host populations with different seasonal forcing, hosts with complete immune histories of infection, and viruses with antigenic phenotypes.  As the simulation proceeds, infections are tracked and a complete genealogy connecting virus samples is constructed.  Results shown here are for a single representative simulation of 40 years of virus evolution in a population of 90 million hosts.  
+Herein, we seek to simultaneously model the genetic and antigenic evolution of the influenza virus.  We represent antigenic phenotypes as points in a $N$-dimensional Euclidean space.  Based on the finding that a two-dimensional map adequately explains observed antigenic distance between strains \cite{Smith04}, we begin with antigenic phenotypes as points on a plane, but relax this assumption later on in the analysis.  After exposure to a virus, a host's risk of infection is proportional to the Euclidean distance between the infecting phenotype and the closest phenotype in the host's immune history.  Mutations perturb antigenic phenotype, moving phenotype in a random radial direction and for a randomly distributed distance.  We implemented this geometrical model in a large-scale individual-based simulation intended to directly model the antigenic map and genealogical tree of the global influenza population.  The simulation includes multiple host populations with different seasonal forcing, hosts with complete immune histories of infection, and viruses with antigenic phenotypes.  As the simulation proceeds, infections are tracked and a complete genealogy connecting virus samples is constructed.  Results shown here are for a single representative simulation of 40 years of virus evolution in a population of 90 million hosts.
 
 \section*{Results}
 
@@ -104,13 +116,14 @@ We would like to thank Sarah Cobey, Aaron King, Pejman Rohani and the attendees 
 
 %%% FUNDING %%%
 \subsection*{Funding} 
-T.B.\ is supported by the Howard Hughes Medical Institute and by the European Molecular Biology Organization.  A.R.\ works as a part of the Interdisciplinary Centre for Human and Avian Influenza Research (ICHAIR) and the University of Edinburgh's Centre for Immunity, Infection and Evolution (CIIE).  M.P.\ is an investigator of the Howard Hughes Medical Institute.  
+TB is supported by the Howard Hughes Medical Institute and by the European Molecular Biology Organization.  AR works as a part of the Interdisciplinary Centre for Human and Avian Influenza Research (ICHAIR) and the University of Edinburgh's Centre for Immunity, Infection and Evolution (CIIE).  MP is an investigator of the Howard Hughes Medical Institute.  
 
 %%% REFERENCES %%%
 \bibliographystyle{plos}
 \bibliography{/Users/bedfordt/Documents/bedford}
 
-\vspace{0.3cm}
+%\vspace{0.3cm}
+\pagebreak
 
 %%% TABLES %%%
 \section*{Tables}
@@ -131,12 +144,13 @@ T.B.\ is supported by the Howard Hughes Medical Institute and by the European Mo
 	\end{tabular}
 \end{table}
 
-%\pagebreak
+\pagebreak
 
 %%% FIGURES %%%
-\section*{Figure legends}
+\section*{Figures}
 
 %%% Figure 1: evol %%%
+\vspace*{\fill}
 \begin{figure}[H]
 	\centering
 	\makebox[\textwidth]{	
@@ -145,30 +159,36 @@ T.B.\ is supported by the Howard Hughes Medical Institute and by the European Mo
 	\caption{\textbf{Simulation results showing epidemiological, antigenic and genealogical dynamics}. (A) Weekly timeseries of incidence of viral infection in north and tropics regions.  (B) Two-dimensional antigenic phenotypes of 5943 viruses sampled over the course of the simulation. Each discrete virus phenotype is shown as a bubble, with bubble area proportional to the number of times this phenotype was sampled.  (C) Genealogical tree depicting the infection history of 376 samples from the virus population.  Parent/offspring relationships were tracked over the course of the simulation, giving a direct observation of the genealogy rather than a phylogenetic inference.  (D) Antigenic map depicting phenotypes of 5943 viruses sampled over the course of the simulation.  To construct the map, noise was added to each sample and the resulting observations grouped into 11 clusters and colored accordingly.  Grid lines show single units of antigenic distance.  Cluster assignments were used to color all panels in a consistent fashion.}
 	\label{evol}
 \end{figure}
+\vspace*{\fill}
 
-%\pagebreak
+\pagebreak
 
 %%% Figure 2: spatial %%%
+\vspace*{\fill}
 \begin{figure}[H]
 	\centering
 	\includegraphics{figures/spatial}
 	\caption{\textbf{Patterns of geographic movement of virus lineages}. (A) Evolutionary relationships among 376 viruses sampled evenly through time colored by geographic location. Lineages residing in the north (N), south (S) and tropics (T) are colored yellow, red and blue respectively. (B) Observed migration rates between regions on side branch lineages (left) and on trunk lineages (right). Arrows denote movement of lineages and arrow width is proportional to migration rate. Circle area is proportional to the expected stationary frequency of a region given the observed migration rates.  In both cases, migration rates are calculated across 80 replicate simulations.}
 	\label{spatial}
 \end{figure}
+\vspace*{\fill}
 
-%\pagebreak
+\pagebreak
 
 %%% Figure 3: immunity %%%
+\vspace*{\fill}
 \begin{figure}[H]
 	\centering
 	\includegraphics{figures/immunity}
 	\caption{\textbf{Host immunity and antigenic history of the virus population}.  Contour lines represent the state of host immunity at the end of the 40-year simulation.  They show the mean risk of infection (as a percentage) after a random host in the population encounters a virus bearing a particular antigenic phenotype.  Contour lines are spaced in intervals of 2.5\%. Bubbles represent a sample of antigenic phenotypes present at the end of the 40-year simulation.  The area of each bubble is proportional to the number of samples with this phenotype.  Lines leading into these bubbles show past antigenic history.  The current phenotypes rapidly coalesce to a trunk phenotype.  The movement of the virus population from the left to the center of the figure can be seen from the antigenic history.  At the end of the simulation several virus phenotypes exist with similar antigenic locations; all of these phenotypes lie significantly ahead of the peak of host immunity.}
 	\label{immunity}
 \end{figure}
+\vspace*{\fill}
 
-%\pagebreak
+\pagebreak
 
 %%% Figure 4: replicateevol %%%
+\vspace*{\fill}
 \begin{figure}[H]
 	\centering
 	\makebox[\textwidth]{	
@@ -177,13 +197,16 @@ T.B.\ is supported by the Howard Hughes Medical Institute and by the European Mo
 	\caption{\textbf{Antigenic phenotypes over the course of 4 years of evolution across 100 replicate simulations starting from identical initial conditions}.  Replicate simulations were initialized with the end state of the  40-year simulation shown in \ref{evol}.  Each panel shows an additional year of evolution, with black points representing the mean antigenic phenotypes of the 100 replicate simulations and gray lines representing the history of each mean antigenic phenotype.}
 	\label{replicateevol}
 \end{figure}
+\vspace*{\fill}
 
-%\pagebreak
+\pagebreak
 
 %%% Figure 5: replicateinc %%%
+\vspace*{\fill}
 \begin{figure}[H]
 	\centering
 	\includegraphics{figures/replicateinc}
 	\caption{\textbf{Timeseries of incidence across 100 replicate simulations with identical initial conditions.} Panels show incidence in the North, Tropics and South regions over the course of 6 years.  Solid black lines represent the median weekly incidence across the 100 replicate simulations, while gray intervals represent the interquartile range across simulations.  There is little variability for the first year of replicate simulations.  Replicate simulations were initialized with the end state of the 40-year simulation shown in \ref{evol}.}
 	\label{replicateinc}
 \end{figure}
+\vspace*{\fill}
