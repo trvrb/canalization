@@ -13,7 +13,6 @@
 %\renewcommand\citeright{)}
 %\renewcommand\citeform[1]{\textsl{#1}}
 \renewcommand\refname{\large References}
-
 \renewcommand\abstractname{}
 
 \usepackage{color} 
@@ -33,10 +32,13 @@
 
 % Bold the 'Figure #' in the caption and separate it with a period
 % Captions will be left justified
-\usepackage{caption}
-\DeclareCaptionLabelFormat{number}{#2}
-\captionsetup{labelfont=bf,labelsep=period,font=small,labelformat=number}
+\usepackage[labelfont=bf,labelsep=period,font=small]{caption}
+\usepackage{subcaption}
+%\renewcommand{\thesubfigure}{\Alph{subfigure}}
+%\DeclareCaptionLabelFormat{number}{#2}
+%\captionsetup{labelfont=bf,labelsep=period,font=small,labelformat=number}
 %\captionsetup{labelfont=bf,labelsep=period,font=doublespacing,labelformat=number}
+
 
 \usepackage{float}
 %\setcounter{topnumber}{1}
@@ -50,8 +52,8 @@
 
 \usepackage{authblk}
 \renewcommand\Authands{ \& }
-\renewcommand\Authfont{\normalsize}
-\renewcommand\Affilfont{\small}
+\renewcommand\Authfont{\normalsize \bf}
+\renewcommand\Affilfont{\small \normalfont}
 
 % comments
 %\usepackage{ulem}
@@ -66,7 +68,7 @@
 %\def\mpc#1{\textcolor{green}{[#1]}}
 
 %%% TITLE %%%
-\title{\vspace{1.5cm} \LARGE \bf Canalization of the evolutionary trajectory of the human influenza virus}
+\title{\vspace{1.0cm} \LARGE \bf Canalization of the evolutionary trajectory of the human influenza virus}
 
 \author[1,2,$\dagger$]{Trevor Bedford}
 \author[3,4]{Andrew Rambaut}
@@ -76,29 +78,20 @@
 \affil[3]{Institute of Evolutionary Biology, University of Edinburgh, Edinburgh, UK.}
 \affil[4]{Fogarty International Center, National Institutes of Health, Bethesda, MD, USA.}
 \affil[$\dagger$]{Present address: Institute of Evolutionary Biology, University of Edinburgh, Edinburgh, UK.}
-\date{\today}
+\date{}
 
 \begin{document}
 
-\renewcommand{\thefigure}{Figure~\arabic{figure}}
-\renewcommand{\thetable}{Table~\arabic{table}}
+%\renewcommand{\thefigure}{Figure~\arabic{figure}}
+%\renewcommand{\thetable}{Table~\arabic{table}}
 
 \maketitle
 
 % Short title: Evolutionary canalization of influenza
 
-\begin{abstract}
-\begin{center}
-\bf \normalsize Abstract
-\end{center}
+\section*{Abstract}
 
-\vspace{0.5cm}
-
-\noindent \normalsize Since its emergence in 1968, influenza A (H3N2) has evolved extensively in genotype and antigenic phenotype.  Antigenic evolution occurs in the context of a two-dimensional `antigenic map', while genetic evolution shows a characteristic ladder-like genealogical tree.  Here, we use a large-scale individual-based model to show that evolution in a Euclidean antigenic space provides a remarkable correspondence between model behavior and the epidemiological, antigenic, genealogical and geographic patterns observed in influenza virus.  We find that evolution away from existing human immunity results in rapid population turnover in the influenza virus and that this population turnover occurs primarily along a single antigenic axis.  Thus, selective dynamics induce a canalized evolutionary trajectory, in which the evolutionary fate of the influenza population is surprisingly repeatable and hence, in theory, predictable.
-\end{abstract}
-
-\vspace{0.5cm}
-\pagebreak
+Since its emergence in 1968, influenza A (H3N2) has evolved extensively in genotype and antigenic phenotype.  Antigenic evolution occurs in the context of a two-dimensional `antigenic map', while genetic evolution shows a characteristic ladder-like genealogical tree.  Here, we use a large-scale individual-based model to show that evolution in a Euclidean antigenic space provides a remarkable correspondence between model behavior and the epidemiological, antigenic, genealogical and geographic patterns observed in influenza virus.  We find that evolution away from existing human immunity results in rapid population turnover in the influenza virus and that this population turnover occurs primarily along a single antigenic axis.  Thus, selective dynamics induce a canalized evolutionary trajectory, in which the evolutionary fate of the influenza population is surprisingly repeatable and hence, in theory, predictable.
 
 \section*{Author Summary}
 
@@ -118,15 +111,48 @@ Herein, we seek to simultaneously model the genetic and antigenic evolution of t
 
 % \subsection*{Antigenic evolution and genealogical patterns}
 
-The virus persists over the course of the 40-year simulation, infecting a significant fraction of the host population through annual winter epidemics in temperate regions and through less periodic epidemics in the tropics (\ref{evol}A).  Across replicate simulations, we observe average yearly attack rates of 6.8\% in temperate regions and rates of 7.1\% in the tropics, comparable with estimated attack rates of influenza A (H3N2) of 3--8\% per year \cite{Monto93,Koelle09}.  Over the course of the simulation, the virus population evolves in antigenic phenotype exhibiting, at any point, a handful of highly abundant phenotypes sampled repeatedly and a large number of phenotypes appearing at low abundance (\ref{evol}B).  By including measurement noise on antigenic locations, we approximate an experimental antigenic map of H3N2 influenza (\ref{evol}D).  The appearance of clusters in the antigenic map comes from the regular spacing of high abundance phenotypes combined with measurement noise.  Over time, clusters of antigenically similar strains are replaced by novel clusters of more advanced strains (\ref{phenotypes}A).  Across replicate simulations, clusters persist for an average of 5.0 years measured as the time it takes for a new cluster to reach 10\% frequency, peak and decline to 10\% frequency.  The transition between clusters occurs quickly, taking an average of 1.8 years.
+The virus persists over the course of the 40-year simulation, infecting a significant fraction of the host population through annual winter epidemics in temperate regions and through less periodic epidemics in the tropics (Figure~\ref{evol}A).  Across replicate simulations, we observe average yearly attack rates of 6.8\% in temperate regions and rates of 7.1\% in the tropics, comparable with estimated attack rates of influenza A (H3N2) of 3--8\% per year \cite{Monto93,Koelle09}.  Over the course of the simulation, the virus population evolves in antigenic phenotype exhibiting, at any point, a handful of highly abundant phenotypes sampled repeatedly and a large number of phenotypes appearing at low abundance (Figure~\ref{evol}B).  By including measurement noise on antigenic locations, we approximate an experimental antigenic map of H3N2 influenza (Figure~\ref{evol}D).  The appearance of clusters in the antigenic map comes from the regular spacing of high abundance phenotypes combined with measurement noise.  Over time, clusters of antigenically similar strains are replaced by novel clusters of more advanced strains (Figure~\ref{phenotypes}A).  Across replicate simulations, clusters persist for an average of 5.0 years measured as the time it takes for a new cluster to reach 10\% frequency, peak and decline to 10\% frequency.  The transition between clusters occurs quickly, taking an average of 1.8 years.
 
-Remarkably, although antigenic phenotype is free to mutate in any direction in the two-dimensional space, selection pressures force the virus population to move in nearly a straight line in antigenic space (\ref{evol}B).  Across replicate simulations, 94\% of the variance of antigenic phenotype can be explained by a single dimension of variation.  This mirrors the empirical results showing a largely linear antigenic map for H3N2 influenza isolates from 1968 to 2003 \cite{Smith04}.  Because of the primarily one-dimensional movement, antigenic distance from the original phenotype increases nearly linearly with time (\ref{phenotypes}B).  Antigenic evolution occurs in a punctuated fashion; periods of relative stasis are interspersed with more rapid antigenic change (\ref{phenotypes}B).  Antigenic and epidemiological dynamics show a fundamental linkage, so that large jumps of antigenic phenotype result in increased rates of infection (\ref{evol}, \ref{driftvsinc}).  In general, evolution via many smaller mutations results in a smoother antigenic map and less variation in yearly epidemics (\ref{incmaptree_smooth}), while evolution via rare mutations of large effect exhibits a more clustered antigenic map and wider variation in seasonal incidence (\ref{incmaptree_rough}).
+%%% Figure 1: evol %%%
+\begin{figure}[tb]
+	\centering
+	\makebox[\textwidth]{	
+		\includegraphics{figures/evol}
+	}
+	\caption{\textbf{Simulation results showing epidemiological, antigenic and genealogical dynamics}. (A) Weekly timeseries of incidence of viral infection in north and tropics regions.  (B) Two-dimensional antigenic phenotypes of 5943 viruses sampled over the course of the simulation. Each discrete virus phenotype is shown as a bubble, with bubble area proportional to the number of times this phenotype was sampled.  (C) Genealogical tree depicting the infection history of 376 samples from the virus population.  Parent/offspring relationships were tracked over the course of the simulation, giving a direct observation of the genealogy rather than a phylogenetic inference.  (D) Antigenic map depicting phenotypes of 5943 viruses sampled over the course of the simulation.  To construct the map, noise was added to each sample and the resulting observations grouped into 11 clusters and colored accordingly.  Grid lines show single units of antigenic distance.  Cluster assignments were used to color all panels in a consistent fashion.}
+	\label{evol}
+\end{figure}
 
-The genealogical tree connecting the evolving virus population appears characteristically sparse with pronounced trunk and short-lived side branches  (\ref{evol}C).  This tree shape is reflected in low levels of standing diversity; across replicates, an average of 5.68 years of evolution separate two randomly sampled viruses in the population.  This level of diversity matches what is observed in phylogenies of influenza A (H3N2) \cite{Rambaut08}.  A spindly genealogical tree is indicative of population turnover, wherein novel antigenic phenotypes continually replace more primitive `spent' phenotypes, purging their genealogical diversity.  In general, natural selection reduces effective population size and genealogical diversity \cite{BedfordBMC11}.  Here, by comparing mutations occurring on trunk branches vs.\ mutations occurring on side branches, we find evidence for pervasive positive selection for antigenic change (\ref{mktable}).  Trunk mutations tend to push antigenic phenotype forward along the line of primary antigenic variation (\ref{mutspectrum}).  We find a roughly linear relationship between the antigenic effect of a mutation and the likelihood that this mutation becomes incorporated into the trunk (\ref{probtrunk}).  Additionally, we find that trunk mutations occur at strikingly regular intervals, with less variation of waiting times than expected under a simple random process (\ref{waittimes}).  There is a relative scarcity of mutation events occurring in intervals under 1 year and a relative excess of a mutation events occurring in 2--3 year intervals (\ref{waittimes}).
+Remarkably, although antigenic phenotype is free to mutate in any direction in the two-dimensional space, selection pressures force the virus population to move in nearly a straight line in antigenic space (Figure~\ref{evol}B).  Across replicate simulations, 94\% of the variance of antigenic phenotype can be explained by a single dimension of variation.  This mirrors the empirical results showing a largely linear antigenic map for H3N2 influenza isolates from 1968 to 2003 \cite{Smith04}.  Because of the primarily one-dimensional movement, antigenic distance from the original phenotype increases nearly linearly with time (Figure~\ref{phenotypes}B).  Antigenic evolution occurs in a punctuated fashion; periods of relative stasis are interspersed with more rapid antigenic change (Figure~\ref{phenotypes}B).  Antigenic and epidemiological dynamics show a fundamental linkage, so that large jumps of antigenic phenotype result in increased rates of infection (Figure~\ref{evol}, Figure~\ref{driftvsinc}).  In general, evolution via many smaller mutations results in a smoother antigenic map and less variation in yearly epidemics (Figure~\ref{incmaptree_smooth}), while evolution via rare mutations of large effect exhibits a more clustered antigenic map and wider variation in seasonal incidence (Figure~\ref{incmaptree_rough}).
+
+The genealogical tree connecting the evolving virus population appears characteristically sparse with pronounced trunk and short-lived side branches  (Figure~\ref{evol}C).  This tree shape is reflected in low levels of standing diversity; across replicates, an average of 5.68 years of evolution separate two randomly sampled viruses in the population.  This level of diversity matches what is observed in phylogenies of influenza A (H3N2) \cite{Rambaut08}.  A spindly genealogical tree is indicative of population turnover, wherein novel antigenic phenotypes continually replace more primitive `spent' phenotypes, purging their genealogical diversity.  In general, natural selection reduces effective population size and genealogical diversity \cite{BedfordBMC11}.  Here, by comparing mutations occurring on trunk branches vs.\ mutations occurring on side branches, we find evidence for pervasive positive selection for antigenic change (Table~\ref{mktable}).  Trunk mutations tend to push antigenic phenotype forward along the line of primary antigenic variation (Figure~\ref{mutspectrum}).  We find a roughly linear relationship between the antigenic effect of a mutation and the likelihood that this mutation becomes incorporated into the trunk (Figure~\ref{probtrunk}).  Additionally, we find that trunk mutations occur at strikingly regular intervals, with less variation of waiting times than expected under a simple random process (Figure~\ref{waittimes}).  There is a relative scarcity of mutation events occurring in intervals under 1 year and a relative excess of a mutation events occurring in 2--3 year intervals (Figure~\ref{waittimes}).
+
+\begin{table}[tb]
+	\centering
+	\caption{\textbf{Rates of mutation and phenotypic change on trunk and side branches and mutational expectation.}}
+	\label{mktable}
+	\begin{tabular*}{1.0\textwidth}{ l c c c c } 
+	\hline
+		 								& Baseline 	& Side branch 	& Trunk		& Trunk / side branch \\
+	\hline				
+	Mutation size (AG units)			& 0.60		& 0.79			& 1.58		& 1.99$\times$ \\
+	Mutation rate (mut per year)		& 0.04		& 0.06			& 0.81		& 13.23$\times$ \\	
+	Antigenic flux (AG units per year)	& 0.02		& 0.05			& 1.27		& 26.25$\times$ \\		
+	\hline
+	\end{tabular*}
+\end{table}
 
 % \subsection*{Spatial dynamics}
 
-The genealogical tree also contains detailed information on the history of migration between regions.  We find that, consistent with empirical estimates \cite{Russell08,Bedford10}, the trunk resides primarily within the tropics, where seasonal dynamics are less prevalent (\ref{spatial}A).  Across replicate simulations, we observe 72\% of the trunk's history within the tropics and 28\% within temperate regions.  With symmetric host contact rates and equal host population sizes, and without seasonal forcing, we would expect trunk proportions of one third for each region.  We calculated rates of migration based on observed event counts across replicate simulations, separating region-specific rates on side branches from region-specific rates on trunk branches.  We find that migration patterns on side branches are close to symmetric, with similar rates between all regions, while migration patterns on trunk branches are highly asymmetric, with high rates of movement between temperate regions and from temperate regions into the tropics (\ref{spatial}B).  Extrapolating from these rates, we arrive at an expected stationary distribution of 76\% tropics and 24\% temperate regions, in line with the observed residency patterns of the trunk.  It may at first seem counter-intuitive to see higher rates of movement from the temperate regions into the tropics along trunk branches, but it makes sense when thought of in terms of conditional probability.  Only those lineages that migrate into the tropics or those lineages which rapidly migrate between the north and south have a chance at becoming the trunk lineage, while lineages that remain within the temperate regions are doomed to extinction.  
+The genealogical tree also contains detailed information on the history of migration between regions.  We find that, consistent with empirical estimates \cite{Russell08,Bedford10}, the trunk resides primarily within the tropics, where seasonal dynamics are less prevalent (Figure~\ref{spatial}A).  Across replicate simulations, we observe 72\% of the trunk's history within the tropics and 28\% within temperate regions.  With symmetric host contact rates and equal host population sizes, and without seasonal forcing, we would expect trunk proportions of one third for each region.  We calculated rates of migration based on observed event counts across replicate simulations, separating region-specific rates on side branches from region-specific rates on trunk branches.  We find that migration patterns on side branches are close to symmetric, with similar rates between all regions, while migration patterns on trunk branches are highly asymmetric, with high rates of movement between temperate regions and from temperate regions into the tropics (Figure~\ref{spatial}B).  Extrapolating from these rates, we arrive at an expected stationary distribution of 76\% tropics and 24\% temperate regions, in line with the observed residency patterns of the trunk.  It may at first seem counter-intuitive to see higher rates of movement from the temperate regions into the tropics along trunk branches, but it makes sense when thought of in terms of conditional probability.  Only those lineages that migrate into the tropics or those lineages which rapidly migrate between the north and south have a chance at becoming the trunk lineage, while lineages that remain within the temperate regions are doomed to extinction.  
+
+%%% Figure 2: spatial %%%
+\begin{figure}[tb]
+	\centering
+	\includegraphics{figures/spatial}
+	\caption{\textbf{Patterns of geographic movement of virus lineages}. (A) Evolutionary relationships among 376 viruses sampled evenly through time colored by geographic location. Lineages residing in the north (N), south (S) and tropics (T) are colored yellow, red and blue respectively. (B) Observed migration rates between regions on side branch lineages (left) and on trunk lineages (right). Arrows denote movement of lineages and arrow width is proportional to migration rate. Circle area is proportional to the expected stationary frequency of a region given the observed migration rates.  In both cases, migration rates are calculated across 80 replicate simulations.}
+	\label{spatial}
+\end{figure}
 
 These findings suggest that persistence and migration are fundamentally connected and have important implications for future phylogeographic analyses.  Russell et al.\ \cite{Russell08} emphasize a source-sink model of movement of the HA protein of influenza A (H3N2) based on their finding of a trunk lineage residing within China and the Southeast Asian tropics.  Whereas, Bedford et al.\ \cite{Bedford10} emphasize a global metapopulation model based on phylogenetic inference of migration rates across the entire tree.  Our results suggest that both scenarios are simultaneously possible; side branches may be highly volatile moving rapidly and symmetrically between regions, while the trunk lineage may be more stable remaining within a region (or within a highly connected network of regions) that has more persistent transmission.  In light of these results, we suggest that future work on the phylogeography of influenza take into account trunk vs.\ side branch differences in migration patterns.
 
@@ -134,25 +160,48 @@ These findings suggest that persistence and migration are fundamentally connecte
 
 \subsection*{Correspondence between model and data}
 
-Although multiple epidemiological/evolutionary mechanisms have been proposed to explain the restricted genetic diversity and rapid population turnover of influenza A (H3N2) \cite{Ferguson03,Tria05,Koelle06,Recker07}, our results show that a simple model coupling antigenic and genealogical evolution exhibits broad explanatory power.  We find a strong correspondence between the antigenic and genealogical patterns generated by our model (\ref{evol}) and patterns of genetic and antigenic evolution exhibited by influenza A (H3N2) \cite{Fitch97,Smith04}.  Our model suggests that punctuated antigenic evolution need only be explained by a lack of mutational opportunity and predicts that more detailed classification of influenza strains will support a relatively small number of predominant phenotypes (\ref{evol}B).  We suggest that a large proportion of intra-cluster variation in the observed antigenic map is due to experimental noise, rather than each strain possessing a unique antigenic location.  Additionally, our model accurately predicts the contrasting dynamics of other types/subtypes of influenza.  We find that lowering mutation size/effect or lowering intrinsic $R_0$ results in decreased incidence, slower antigenic movement and greater genealogical diversity, all distinguishing characteristics of H1N1 influenza and influenza B (\ref{h1n1_mut}, \ref{h1n1_r0}).  
+Although multiple epidemiological/evolutionary mechanisms have been proposed to explain the restricted genetic diversity and rapid population turnover of influenza A (H3N2) \cite{Ferguson03,Tria05,Koelle06,Recker07}, our results show that a simple model coupling antigenic and genealogical evolution exhibits broad explanatory power.  We find a strong correspondence between the antigenic and genealogical patterns generated by our model (Figure~\ref{evol}) and patterns of genetic and antigenic evolution exhibited by influenza A (H3N2) \cite{Fitch97,Smith04}.  Our model suggests that punctuated antigenic evolution need only be explained by a lack of mutational opportunity and predicts that more detailed classification of influenza strains will support a relatively small number of predominant phenotypes (Figure~\ref{evol}B).  We suggest that a large proportion of intra-cluster variation in the observed antigenic map is due to experimental noise, rather than each strain possessing a unique antigenic location.  Additionally, our model accurately predicts the contrasting dynamics of other types/subtypes of influenza.  We find that lowering mutation size/effect or lowering intrinsic $R_0$ results in decreased incidence, slower antigenic movement and greater genealogical diversity, all distinguishing characteristics of H1N1 influenza and influenza B (Figure~\ref{h1n1_mut}, Figure~\ref{h1n1_r0}).  
 
-In our model, when antigenic phenotype remains static, there may be multiple consecutive seasons without appreciable incidence (\ref{evol}A), a pattern apparently absent from H3N2 influenza \cite{Finkelman07}.  We suggest that any model exhibiting punctuated evolution broadly consistent with the punctuated change seen in the experimental antigenic map will show similar patterns of incidence.  We can `fix' the incidence patterns, but at the cost of too smooth an antigenic map (\ref{incmaptree_smooth}).  Evolutionary patterns of the neuraminidase (NA) protein may provide an explanation.  Epitopes in the HA and NA proteins are jointly responsible for determining antigenicity \cite{Nelson07NatRevGenet}, and it is now clear that levels of adaptive evolution are similar between HA and NA \cite{Bhatt11}.  Thus, changes in NA may be driving incidence patterns as well, resulting in an observed timeseries of incidence partially divorced from the antigenic map of HA.
+In our model, when antigenic phenotype remains static, there may be multiple consecutive seasons without appreciable incidence (Figure~\ref{evol}A), a pattern apparently absent from H3N2 influenza \cite{Finkelman07}.  We suggest that any model exhibiting punctuated evolution broadly consistent with the punctuated change seen in the experimental antigenic map will show similar patterns of incidence.  We can `fix' the incidence patterns, but at the cost of too smooth an antigenic map (Figure~\ref{incmaptree_smooth}).  Evolutionary patterns of the neuraminidase (NA) protein may provide an explanation.  Epitopes in the HA and NA proteins are jointly responsible for determining antigenicity \cite{Nelson07NatRevGenet}, and it is now clear that levels of adaptive evolution are similar between HA and NA \cite{Bhatt11}.  Thus, changes in NA may be driving incidence patterns as well, resulting in an observed timeseries of incidence partially divorced from the antigenic map of HA.
 
 It remains a central question as to the extent that short-lived strain-transcending immunity is responsible for influenza's limited diversity and spindly genealogical tree \cite{Ferguson03,Tria05}.  Our findings suggest a possible resolution.  Although lacking short-lived immunity, our model shows a detailed correspondence to both the antigenic map and genealogical tree of H3N2 influenza.  If an antigenic map were to show a deep bifurcation, where two viral lineages move in different antigenic directions, then we would expect the same bifurcation to be evident in the genealogical tree.  Short-lived strain-transcending immunity provides a mechanism by which lineages may diverge in antigenic phenotype, but still show epidemiological interference.  This mechanism would explain a situation where bifurcations emerge in the antigenic map, but competition results in the extinction of divergent antigenic lineages.  The empirical antigenic map \cite{Smith04} suggests that this is not the case; one cluster leads to another cluster in orderly succession and there is never competition between antigenically distant clusters.  This supports the hypothesis that antigenic evolution is primarily limited by a lack of mutational availability.  This is not to say that short-lived strain-transcending immunity is not present; observed interference between subtypes \cite{Ferguson03,Goldstein11} and evolution at CTL epitopes \cite{Voeten00} provides substantial evidence for its existence.  Instead, we suggest that short-lived strain-transcending immunity does not automatically generate antigenic maps and genealogical trees consistent with empirical evidence.
 
 \subsection*{Linear antigenic movement}
 
-It would seem possible for one viral lineage to move in one antigenic direction, while another lineage moves tangentially, eventually resulting in two non-interacting viral lineages.  Instead, we find that only movement in a single antigenic direction is favored.  The origins of this pattern can be seen in the interaction between virus evolution and host immunity (\ref{immunity}).  As the virus population evolves forward it leaves a wake of immunity in the host population, and evolution away from this immunity results in the canalization of the antigenic phenotype; mutations that continue along the line of primary antigenic variation will show a transmission advantage compared to more tangential mutations.  
+It would seem possible for one viral lineage to move in one antigenic direction, while another lineage moves tangentially, eventually resulting in two non-interacting viral lineages.  Instead, we find that only movement in a single antigenic direction is favored.  The origins of this pattern can be seen in the interaction between virus evolution and host immunity (Figure~\ref{immunity}).  As the virus population evolves forward it leaves a wake of immunity in the host population, and evolution away from this immunity results in the canalization of the antigenic phenotype; mutations that continue along the line of primary antigenic variation will show a transmission advantage compared to more tangential mutations.  
+
+\begin{figure}[H]
+	\centering
+	\includegraphics{figures/immunity}
+	\caption{\textbf{Host immunity and antigenic history of the virus population}.  Contour lines represent the state of host immunity at the end of the 40-year simulation.  They show the mean risk of infection (as a percentage) after a random host in the population encounters a virus bearing a particular antigenic phenotype.  Contour lines are spaced in intervals of 2.5\%. Bubbles represent a sample of antigenic phenotypes present at the end of the 40-year simulation.  The area of each bubble is proportional to the number of samples with this phenotype.  Lines leading into these bubbles show past antigenic history.  The current phenotypes rapidly coalesce to a trunk phenotype.  The movement of the virus population from the left to the center of the figure can be seen from the antigenic history.  At the end of the simulation several virus phenotypes exist with similar antigenic locations; all of these phenotypes lie significantly ahead of the peak of host immunity.}
+	\label{immunity}
+\end{figure}
 
 Following the work of Smith et al.\ \cite{Smith04}, it remained an open question of why a two-dimensional map should explain the antigenic variation of H3N2 influenza.  Although the authors astutely speculated that ``there is a selective advantage for clusters that move away linearly from previous clusters as they most effectively escape existing population-level immunity, and this is a plausible explanation for the somewhat linear antigenic evolution in regions of the antigenic map.''  This hypothesis remained to be tested.  Here, we show from a simple model of epidemiology and evolution that a linear trajectory of antigenic evolution dynamically emerges due to basic selective pressures.  This result simultaneously explains the linear pattern of antigenic drift \cite{Smith04} and the characteristically spindly genealogical tree \cite{Fitch97} exhibited by influenza A (H3N2).
 
-To consider to what extent these results were contingent on the dimensionality of the underlying antigenic model, we further implemented our model in a 10-dimensional antigenic space.  Here, mutations occur as 10-spheres, but the distance moved by a mutation is the same as in the previous two-dimensional formulation.  We arrive at nearly the same results with this model; principal components analysis shows that the first and second dimensions of variation account for 87\% and 7\%, respectively, of the total variance (\ref{10dgrid}).  Thus, our model predicts that future work probing mutational effects will support an underlying high-dimensional antigenic space, even though a two-dimensional map is sufficient to explain observed antigenic relationships among strains.
+To consider to what extent these results were contingent on the dimensionality of the underlying antigenic model, we further implemented our model in a 10-dimensional antigenic space.  Here, mutations occur as 10-spheres, but the distance moved by a mutation is the same as in the previous two-dimensional formulation.  We arrive at nearly the same results with this model; principal components analysis shows that the first and second dimensions of variation account for 87\% and 7\%, respectively, of the total variance (Figure~\ref{10dgrid}).  Thus, our model predicts that future work probing mutational effects will support an underlying high-dimensional antigenic space, even though a two-dimensional map is sufficient to explain observed antigenic relationships among strains.
 
 \subsection*{Winding back the tape}
 
-It seems clear that, in our model, selection reduces the degrees of freedom of antigenic evolution.  In light of this, we wanted to examine the degree of stochasticity in replicated evolutionary trajectories, and thereby test what happens when we ``wind back the tape'' \cite{GouldWonderfulLife} on the evolution of the virus.  We ran 100 replicate simulations, each starting from the endpoint of the original 40-year simulation (\ref{replicateevol}, \ref{replicateinc}).  Initially, we find a great detail of repeatability; during the first year of evolution, every replicate virus population undergoes a similar antigenic transition (\ref{replicateevol}), resulting in a repeatable peak in northern hemisphere incidence (\ref{replicateinc}).  After three years, repeatability has mostly disappeared, with antigenic phenotype and incidence appearing highly variable across replicates (\ref{replicateevol}, \ref{replicateinc}).  The 1--2 year timescale of repeatability can be explained by the presence of standing antigenic variation.  In the initial virus population, there are several novel antigenic variants present at low frequency (\ref{immunity}), one of which, without fail, comes to predominate the virus population.  
+It seems clear that, in our model, selection reduces the degrees of freedom of antigenic evolution.  In light of this, we wanted to examine the degree of stochasticity in replicated evolutionary trajectories, and thereby test what happens when we ``wind back the tape'' \cite{GouldWonderfulLife} on the evolution of the virus.  We ran 100 replicate simulations, each starting from the endpoint of the original 40-year simulation (Figure~\ref{replicateevol}, Figure~\ref{replicateinc}).  Initially, we find a great detail of repeatability; during the first year of evolution, every replicate virus population undergoes a similar antigenic transition (Figure~\ref{replicateevol}), resulting in a repeatable peak in northern hemisphere incidence (Figure~\ref{replicateinc}).  After three years, repeatability has mostly disappeared, with antigenic phenotype and incidence appearing highly variable across replicates (Figure~\ref{replicateevol}, Figure~\ref{replicateinc}).  The 1--2 year timescale of repeatability can be explained by the presence of standing antigenic variation.  In the initial virus population, there are several novel antigenic variants present at low frequency (Figure~\ref{immunity}), one of which, without fail, comes to predominate the virus population.  
+
+\begin{figure}[H]
+	\centering
+	\makebox[\textwidth]{	
+		\includegraphics{figures/replicateevol}
+	}
+	\caption{\textbf{Antigenic phenotypes over the course of 4 years of evolution across 100 replicate simulations starting from identical initial conditions}.  Replicate simulations were initialized with the end state of the  40-year simulation shown in Figure~\ref{evol}.  Each panel shows an additional year of evolution, with black points representing the mean antigenic phenotypes of the 100 replicate simulations and gray lines representing the history of each mean antigenic phenotype.}
+	\label{replicateevol}
+\end{figure}
 
 We see that the initial evolutionary trajectory, during which time standing variation plays out, is highly repeatable, and thus predictable given enough information and the right methods of analysis.  However, prediction of longer-term evolutionary scenarios will necessarily be difficult or impossible except in a vague sense.  Through careful surveillance efforts and genetic and antigenic characterization of influenza strains, the World Health Organization makes twice-yearly vaccine strain recommendations \cite{Barr10}.  It should be possible to combine these sorts of modeling approaches with surveillance data to gauge the likelihood that a sampled variant will spread through the population.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics{figures/replicateinc}
+	\caption{\textbf{Timeseries of incidence across 100 replicate simulations with identical initial conditions.} Panels show incidence in the North, Tropics and South regions over the course of 6 years.  Solid black lines represent the median weekly incidence across the 100 replicate simulations, while gray intervals represent the interquartile range across simulations.  There is little variability for the first year of replicate simulations.  Replicate simulations were initialized with the end state of the 40-year simulation shown in Figure~\ref{evol}.}
+	\label{replicateinc}
+\end{figure}
 
 Recent work on empirical fitness landscapes has shown that natural selection follows few mutational paths \cite{Weinreich06}.  The spindly genealogical tree and the almost linear serial replacement of influenza strains has remained a puzzling phenomenon.  We suggest that the evolutionary and epidemiological dynamics displayed by the influenza virus may simply be explained as an outgrowth of selection to avoid host immunity.  Natural selection can only `see' one step ahead, and so sacrifices long-term gains for short-term advantages.  The result is a canalized evolutionary trajectory lacking antigenic diversification.
 
@@ -172,15 +221,15 @@ The initial virus population consisted of 10 infections each with the identical 
 
 \subsection*{Model output}
 
-Daily incidence and prevalence are recorded for each region.  During the course of the simulation, samples of current infections are taken from the evolving virus population at a rate proportional to prevalence.  Each viral infection is assigned a unique ID, and in addition, infections have their phenotypes, locations and dates of infection recorded.  In this model, viruses lack sequences and so standard phylogenetic inference of the evolutionary relationships among strains is impossible.  Instead, the viral genealogy is directly recorded.  This is made possible by tracking transmission events connecting infections during the simulation; infections record the ID of their `parent' infection.  Proceeding from a sample of infections, their genealogical history can be reconstructed by following consecutive links to parental infections.  During this procedure, lineages coalesce to the ancestral lineages shared by the sampled infections, eventually arriving at the initial infection introduced at the beginning of the simulation.  Commonly, phylodynamic simulations generate sequences that are subsequently analyzed with phylogenetic software to produce an estimated genealogy \cite{Ferguson03,Koelle06,Koelle10}.  This step of phylogenetic inference is imperfect and computationally intensive, and by side-stepping phylogenetic reconstruction we arrive at genealogies quickly and accurately.  Other authors have implemented similar tracking of infection trees \cite{Volz09,Odea11}.  This genealogy-centric approach makes many otherwise difficult calculations transparent, such as calculating lineage-specific region-specific migration rates (\ref{spatial}) and lineage-specific mutation effects (\ref{mutspectrum}).
+Daily incidence and prevalence are recorded for each region.  During the course of the simulation, samples of current infections are taken from the evolving virus population at a rate proportional to prevalence.  Each viral infection is assigned a unique ID, and in addition, infections have their phenotypes, locations and dates of infection recorded.  In this model, viruses lack sequences and so standard phylogenetic inference of the evolutionary relationships among strains is impossible.  Instead, the viral genealogy is directly recorded.  This is made possible by tracking transmission events connecting infections during the simulation; infections record the ID of their `parent' infection.  Proceeding from a sample of infections, their genealogical history can be reconstructed by following consecutive links to parental infections.  During this procedure, lineages coalesce to the ancestral lineages shared by the sampled infections, eventually arriving at the initial infection introduced at the beginning of the simulation.  Commonly, phylodynamic simulations generate sequences that are subsequently analyzed with phylogenetic software to produce an estimated genealogy \cite{Ferguson03,Koelle06,Koelle10}.  This step of phylogenetic inference is imperfect and computationally intensive, and by side-stepping phylogenetic reconstruction we arrive at genealogies quickly and accurately.  Other authors have implemented similar tracking of infection trees \cite{Volz09,Odea11}.  This genealogy-centric approach makes many otherwise difficult calculations transparent, such as calculating lineage-specific region-specific migration rates (Figure~\ref{spatial}) and lineage-specific mutation effects (Figure~\ref{mutspectrum}).
 
-Infections are sampled at a rate designed to give approximately 6000 samples over the course of the simulation, with genealogies constructed from a subsample of approximately 300 samples.  The results presented in \ref{evol} represent a single representative model output; one hundred replicate simulations were conducted to arrive at statistical estimates. 
+Infections are sampled at a rate designed to give approximately 6000 samples over the course of the simulation, with genealogies constructed from a subsample of approximately 300 samples.  The results presented in Figure~\ref{evol} represent a single representative model output; one hundred replicate simulations were conducted to arrive at statistical estimates. 
 
 \subsection*{Parameter selection and sensitivity analysis}
 
 Estimating what the basic reproductive number $R_0$ for seasonal influenza would be in a naive population is notoriously difficult.  Season-to-season estimates of effective reproductive number $R$ for the USA and France gathered from mortality timeseries display an interquartile range of 0.9--1.8 \cite{Chowell08}.  Geographic spread within the USA suggests an average seasonal $R$ of 1.35 \cite{Viboud06}.  These estimates of $R$ will be lower than the $R_0$ of influenza due to the effects of human immunity.  We assumed $R_0$ of 1.8, consistent with the upper range of seasonal estimates.  Duration of infection was chosen based on patterns of viral shedding shown during challenge studies \cite{Carrat08}.  The linear form of the risk of infection and its increase as a function of antigenic distance $s$ was chosen as 0.07 based on experimental work on equine influenza \cite{Park09} and from studies of vaccine effectiveness \cite{Gupta06}.  Between-region contact rate $m$ was chosen to yield a trunk lineage that resides predominantly in the tropics.  With much higher rates of mixing, the trunk lineage ceases to show a preference the tropics, and with much lower rates of mixing, particular seasons in the north and the south will often be skipped.  The amplitude of seasonal forcing $\epsilon$ was chosen to be just large enough to get consistent fade-outs in the summer months and is consistent with empirical estimates \cite{Truscott11}.
 
-Mutational parameters were based, in part, on model behavior.  We assumed 10 amino acid sites involved in antigenicity, each mutating at a rate of $10^{-5}$ \cite{Rambaut08} to give a phenotypic mutation rate $\mu = 10^{-4}$ per infection per day.  We chose mutational effect parameters ($\textrm{mean} = 0.6$, $\textrm{sd} = 0.4$) that would give suitably fast rates of antigenic evolution corresponding to approximately 1.2 units of antigenic change per year, while simultaneously giving clustered patterns of antigenic evolution  \cite{Smith04}.  Similar outcomes are possible under a variety of parameterizations.  If mutations are more common ($\mu = 3 \times 10^{-4}$) and show less variation in effect size ($\textrm{mean} = 0.6$, $\textrm{sd} = 0.2$), then antigenic drift occurs in a more continuous fashion, resulting in less variation in seasonal incidence and a smoother distribution of antigenic phenotypes (\ref{incmaptree_smooth}).  If mutations are less common ($\mu = 5 \times 10^{-5}$) and show more variance in effect ($\textrm{mean} = 0.7$, $\textrm{sd} = 0.5$), then antigenic change occurs in a more punctuated fashion (\ref{incmaptree_rough}).  Basic reproductive number $R_0$ can be traded off with mutational parameters to some extent.  Less mutational input and higher $R_0$ will give similar patterns of antigenic drift and seasonal incidence.  Similarly, Kucharski and Gog \cite{Kucharski11} find that increasing $R_0$ results in increased rates of emergence of antigenically novel strains.
+Mutational parameters were based, in part, on model behavior.  We assumed 10 amino acid sites involved in antigenicity, each mutating at a rate of $10^{-5}$ \cite{Rambaut08} to give a phenotypic mutation rate $\mu = 10^{-4}$ per infection per day.  We chose mutational effect parameters ($\textrm{mean} = 0.6$, $\textrm{sd} = 0.4$) that would give suitably fast rates of antigenic evolution corresponding to approximately 1.2 units of antigenic change per year, while simultaneously giving clustered patterns of antigenic evolution  \cite{Smith04}.  Similar outcomes are possible under a variety of parameterizations.  If mutations are more common ($\mu = 3 \times 10^{-4}$) and show less variation in effect size ($\textrm{mean} = 0.6$, $\textrm{sd} = 0.2$), then antigenic drift occurs in a more continuous fashion, resulting in less variation in seasonal incidence and a smoother distribution of antigenic phenotypes (Figure~\ref{incmaptree_smooth}).  If mutations are less common ($\mu = 5 \times 10^{-5}$) and show more variance in effect ($\textrm{mean} = 0.7$, $\textrm{sd} = 0.5$), then antigenic change occurs in a more punctuated fashion (Figure~\ref{incmaptree_rough}).  Basic reproductive number $R_0$ can be traded off with mutational parameters to some extent.  Less mutational input and higher $R_0$ will give similar patterns of antigenic drift and seasonal incidence.  Similarly, Kucharski and Gog \cite{Kucharski11} find that increasing $R_0$ results in increased rates of emergence of antigenically novel strains.
 
 In 20 out of the 100 replicate simulations, we observed a major bifurcation of antigenic phenotype and a consequent increase in incidence and genealogical diversity.  These simulations were removed from the analysis.   Similar to Koelle et al. \cite{Koelle11}, we assume that although the historical evolution of H3N2 influenza followed the path of a single lineage, it could have included a major bifurcation.  Further work in these directions will help to determine the likelihoods of single lineage vs.\ bifurcating scenarios.
 
@@ -188,7 +237,7 @@ In 20 out of the 100 replicate simulations, we observed a major bifurcation of a
 
 Antigenic phenotypes are modeled as discrete entities on the Euclidean plane; multiple samples have the same antigenic location.  However, in the empirical antigenic map of influenza A (H3N2), each strain appears in a unique location \cite{Smith04}.  We would argue that some of this pattern comes from experimental noise.  Indeed, Smith et al. \cite{Smith04} find that observed measurements and measurements predicted from the map differ by an average of 0.83 antigenic units with a standard deviation of 0.67 antigenic units.  We take this as a proxy for experimental noise and add jitter to each sampled antigenic phenotype by moving it in a random direction for an exponentially distributed distance with mean of 0.53 antigenic units.  If two samples with the same underlying antigenic phenotype are jittered in this fashion, the distance between them averages 0.83 antigenic units with a standard deviation of 0.64 units.
 
-We added noise to each of the 5943 sampled viruses in this fashion resulting in an approximated antigenic map (\ref{evol}D).  Virus samples were then clustering following standard clustering algorithms.  We tried clustering by the $k$-means algorithm and also agglomerative hierarchical clustering with a variety of linkage criterion.  We found that clustering by Ward's criterion consistently outperformed other methods, when measured in terms of within-cluster and between-cluster variances.  However, the exact clustering algorithm had little effect on our overall results.
+We added noise to each of the 5943 sampled viruses in this fashion resulting in an approximated antigenic map (Figure~\ref{evol}D).  Virus samples were then clustering following standard clustering algorithms.  We tried clustering by the $k$-means algorithm and also agglomerative hierarchical clustering with a variety of linkage criterion.  We found that clustering by Ward's criterion consistently outperformed other methods, when measured in terms of within-cluster and between-cluster variances.  However, the exact clustering algorithm had little effect on our overall results.
 
 %%% ACKNOWLEDGMENTS %%%
 \subsection*{Acknowledgments} 
@@ -202,101 +251,13 @@ TB is supported by the Howard Hughes Medical Institute and by the European Molec
 \bibliographystyle{plos}
 \bibliography{/Users/bedfordt/Documents/bedford}
 
-
-%\vspace{0.3cm}
 \pagebreak
-
-%%% TABLES %%%
-\section*{Tables}
-
-%%% Table 1: mktable %%%
-\begin{table}[h]
-	\centering
-	\caption{\textbf{Rates of mutation and phenotypic change on trunk and side branches and mutational expectation.}}
-	\label{mktable}
-	\begin{tabular}{ l c c c c } 
-	\hline
-		 								& Baseline 	& Side branch 	& Trunk		& Trunk / side branch \\
-	\hline				
-	Mutation size (AG units)			& 0.60		& 0.79			& 1.58		& 1.99$\times$ \\
-	Mutation rate (mut per year)		& 0.04		& 0.06			& 0.81		& 13.23$\times$ \\	
-	Antigenic flux (AG units per year)	& 0.02		& 0.05			& 1.27		& 26.25$\times$ \\		
-	\hline
-	\end{tabular}
-\end{table}
-
-\pagebreak
-
-%%% FIGURES %%%
-\section*{Figures}
-
-%%% Figure 1: evol %%%
-\vspace*{\fill}
-\begin{figure}[H]
-	\centering
-	\makebox[\textwidth]{	
-		\includegraphics{figures/evol}
-	}
-	\caption{\textbf{Simulation results showing epidemiological, antigenic and genealogical dynamics}. (A) Weekly timeseries of incidence of viral infection in north and tropics regions.  (B) Two-dimensional antigenic phenotypes of 5943 viruses sampled over the course of the simulation. Each discrete virus phenotype is shown as a bubble, with bubble area proportional to the number of times this phenotype was sampled.  (C) Genealogical tree depicting the infection history of 376 samples from the virus population.  Parent/offspring relationships were tracked over the course of the simulation, giving a direct observation of the genealogy rather than a phylogenetic inference.  (D) Antigenic map depicting phenotypes of 5943 viruses sampled over the course of the simulation.  To construct the map, noise was added to each sample and the resulting observations grouped into 11 clusters and colored accordingly.  Grid lines show single units of antigenic distance.  Cluster assignments were used to color all panels in a consistent fashion.}
-	\label{evol}
-\end{figure}
-\vspace*{\fill}
-
-\pagebreak
-
-%%% Figure 2: spatial %%%
-\vspace*{\fill}
-\begin{figure}[H]
-	\centering
-	\includegraphics{figures/spatial}
-	\caption{\textbf{Patterns of geographic movement of virus lineages}. (A) Evolutionary relationships among 376 viruses sampled evenly through time colored by geographic location. Lineages residing in the north (N), south (S) and tropics (T) are colored yellow, red and blue respectively. (B) Observed migration rates between regions on side branch lineages (left) and on trunk lineages (right). Arrows denote movement of lineages and arrow width is proportional to migration rate. Circle area is proportional to the expected stationary frequency of a region given the observed migration rates.  In both cases, migration rates are calculated across 80 replicate simulations.}
-	\label{spatial}
-\end{figure}
-\vspace*{\fill}
-
-\pagebreak
-
-%%% Figure 3: immunity %%%
-\vspace*{\fill}
-\begin{figure}[H]
-	\centering
-	\includegraphics{figures/immunity}
-	\caption{\textbf{Host immunity and antigenic history of the virus population}.  Contour lines represent the state of host immunity at the end of the 40-year simulation.  They show the mean risk of infection (as a percentage) after a random host in the population encounters a virus bearing a particular antigenic phenotype.  Contour lines are spaced in intervals of 2.5\%. Bubbles represent a sample of antigenic phenotypes present at the end of the 40-year simulation.  The area of each bubble is proportional to the number of samples with this phenotype.  Lines leading into these bubbles show past antigenic history.  The current phenotypes rapidly coalesce to a trunk phenotype.  The movement of the virus population from the left to the center of the figure can be seen from the antigenic history.  At the end of the simulation several virus phenotypes exist with similar antigenic locations; all of these phenotypes lie significantly ahead of the peak of host immunity.}
-	\label{immunity}
-\end{figure}
-\vspace*{\fill}
-
-\pagebreak
-
-%%% Figure 4: replicateevol %%%
-\vspace*{\fill}
-\begin{figure}[H]
-	\centering
-	\makebox[\textwidth]{	
-		\includegraphics{figures/replicateevol}
-	}
-	\caption{\textbf{Antigenic phenotypes over the course of 4 years of evolution across 100 replicate simulations starting from identical initial conditions}.  Replicate simulations were initialized with the end state of the  40-year simulation shown in \ref{evol}.  Each panel shows an additional year of evolution, with black points representing the mean antigenic phenotypes of the 100 replicate simulations and gray lines representing the history of each mean antigenic phenotype.}
-	\label{replicateevol}
-\end{figure}
-\vspace*{\fill}
-
-\pagebreak
-
-%%% Figure 5: replicateinc %%%
-\vspace*{\fill}
-\begin{figure}[H]
-	\centering
-	\includegraphics{figures/replicateinc}
-	\caption{\textbf{Timeseries of incidence across 100 replicate simulations with identical initial conditions.} Panels show incidence in the North, Tropics and South regions over the course of 6 years.  Solid black lines represent the median weekly incidence across the 100 replicate simulations, while gray intervals represent the interquartile range across simulations.  There is little variability for the first year of replicate simulations.  Replicate simulations were initialized with the end state of the 40-year simulation shown in \ref{evol}.}
-	\label{replicateinc}
-\end{figure}
-\vspace*{\fill}
 
 \setcounter{figure}{0}
 \setcounter{table}{0}
 \setcounter{page}{1}
-\renewcommand{\thefigure}{Figure~S\arabic{figure}}
-\renewcommand{\thetable}{Table~S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
 \renewcommand{\thepage}{S\arabic{page}}
   
 \section*{Supporting Information}
@@ -306,7 +267,7 @@ TB is supported by the Howard Hughes Medical Institute and by the European Molec
 \begin{figure}[H]
 	\centering
 	\includegraphics{figures/phenotypes}
-	\caption{\textbf{Antigenic evolution over the course of the 40-year simulation}. (A) Proportion of virus population comprised of each antigenic cluster through time.  (B) Antigenic distance from initial phenotype ($x=0$, $y=0$) for each of 5943 virus samples relative to time of virus sampling.  Viruses were sampled at a constant rate proportional to prevalence and coloring was determined from the antigenic map in \ref{evol}D.}
+	\caption{\textbf{Antigenic evolution over the course of the 40-year simulation}. (A) Proportion of virus population comprised of each antigenic cluster through time.  (B) Antigenic distance from initial phenotype ($x=0$, $y=0$) for each of 5943 virus samples relative to time of virus sampling.  Viruses were sampled at a constant rate proportional to prevalence and coloring was determined from the antigenic map in Figure~\ref{evol}D.}
 	\label{phenotypes}
 \end{figure}
 \vspace*{\fill}
