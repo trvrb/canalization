@@ -33,7 +33,12 @@ canal.html.
 
 Additionally, I've made use of GitHub pages.  This repository is stored in the branch gh-pages.  
 This causes files to be published at trvrb.github.com/canalization/. Here, I've renamed canal.html to
-index.html.
+index.html.  A full compile is possible with:
+
+	pdflatex canal
+	pdflatex canal
+	htlatex canal ms
+	mv canal.html index.html
 
 -------------------------------------------
 
