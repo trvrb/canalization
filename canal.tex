@@ -3,49 +3,40 @@
 \documentclass[11pt,oneside,letterpaper]{article}
 
 % graphicx package, useful for including eps and pdf graphics
-% include graphics with the command \includegraphics
 \usepackage{graphicx}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+% basic packages
+\usepackage{color} 
+\usepackage{parskip}
+\usepackage{float}
+
+% text layout
+\usepackage{geometry}
+\geometry{textwidth=15.15cm} % 15.25cm for single-space, 16.25cm for double-space
+\geometry{textheight=22cm} % 22cm for single-space, 22.5cm for double-space
+
+% helps to keep figures from being orphaned on a page by themselves
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+
+% bold the 'Figure #' in the caption and separate it with a period
+% Captions will be left justified
+\usepackage[labelfont=bf,labelsep=period,font=small]{caption}
+
+% review layout with double-spacing
+%\usepackage{setspace} 
+%\doublespacing
+%\captionsetup{labelfont=bf,labelsep=period,font=doublespacing}
 
 % cite package, to clean up citations in the main text. Do not remove.
 %\usepackage{cite}
 %\renewcommand\citeleft{(}
 %\renewcommand\citeright{)}
 %\renewcommand\citeform[1]{\textsl{#1}}
+
+% Remove brackets from numbering in list of References
 \renewcommand\refname{\large References}
-\renewcommand\abstractname{}
-
-\usepackage{color} 
-\usepackage{parskip}
-
-% Text layout
-\usepackage{geometry}
-\geometry{textwidth=15.15cm} % 15.25cm for single-space, 16.25cm for double-space
-\geometry{textheight=22cm} % 22cm for single-space, 22.5cm for double-space
-
-%\usepackage{setspace} 
-%\doublespacing
-
-% Helps to keep figures from being orphaned on a page by themselves
-\renewcommand{\topfraction}{0.85}
-\renewcommand{\textfraction}{0.1}
-
-% Bold the 'Figure #' in the caption and separate it with a period
-% Captions will be left justified
-\usepackage[labelfont=bf,labelsep=period,font=small]{caption}
-\usepackage{subcaption}
-%\renewcommand{\thesubfigure}{\Alph{subfigure}}
-%\DeclareCaptionLabelFormat{number}{#2}
-%\captionsetup{labelfont=bf,labelsep=period,font=small,labelformat=number}
-%\captionsetup{labelfont=bf,labelsep=period,font=doublespacing,labelformat=number}
-
-
-\usepackage{float}
-%\setcounter{topnumber}{1}
-%\setcounter{bottomnumber}{1}
-%\setcounter{totalnumber}{1}
-
-% Remove brackets from numbering in List of References
 \makeatletter
 \renewcommand{\@biblabel}[1]{\quad#1.}
 \makeatother
