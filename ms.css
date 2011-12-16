@@ -69,6 +69,10 @@ hr {
 	font-weight:bold;
 }
 
+.cmmi-10x-x-109 {
+	font-style:italic;
+}
+
 .author {
 	padding:0px; 
 	margin:15px 15px 15px 15px;
@@ -101,7 +105,8 @@ img {
 }
 
 td {
-	min-width:110px;
+	min-width:100px;
+	padding:0px 25px 0px 25px;
 }
 
 .thebibliography {

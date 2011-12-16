@@ -1,4 +1,4 @@
-/* canal.css from canal.tex (TeX4ht, 2011-12-16 14:40:00) */
+/* canal.css from canal.tex (TeX4ht, 2011-12-16 16:43:00) */
   body {
   min-width:100%;
   max-width:100%;
@@ -74,6 +74,10 @@ hr {
   font-weight:bold;
 }
 
+.cmmi-10x-x-109 {
+  font-style:italic;
+}
+
 .author {
   padding:0px;
   margin:15px 15px 15px 15px;
@@ -91,12 +95,12 @@ hr {
 .endfigure {
   border: 0;
 }
+                                                                                  
+                                                                                  
 
 img {
   float:right;
   padding:18px 10px 10px 18px;
-                                                                                  
-                                                                                  
 }
 
 .table {
@@ -108,7 +112,8 @@ img {
 }
 
 td {
-  min-width:110px;
+  min-width:100px;
+  padding:0px 25px 0px 25px;
 }
 
 .thebibliography {

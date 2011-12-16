@@ -28,9 +28,9 @@ This will produce a PDF entitled canal.pdf.  If you want HTML output, run:
 	
 This uses ms.cfg and ms.css to style the resulting HTML output.  This produces a file entitled 
 canal.html.  There were a couple of styling issues that I couldn't take care of through the 
-stylesheet and so I added a small Ruby script to do some post-hoc styling.  Run:
+stylesheet and so I added a small Ruby script to do some post-hoc styling and file cleanup.  Run:
 
-	ruby clean.rb canal.html
+	ruby clean.rb canal
 
 -------------------------------------------
 
@@ -41,7 +41,7 @@ index.html.  A full compile is possible with:
 	pdflatex canal
 	pdflatex canal
 	htlatex canal ms
-	ruby clean.rb canal.html
+	ruby clean.rb canal
 	mv canal.html index.html
 
 -------------------------------------------
