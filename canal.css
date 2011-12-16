@@ -1,4 +1,4 @@
-/* canal.css from canal.tex (TeX4ht, 2011-11-23 15:53:00) */
+/* canal.css from canal.tex (TeX4ht, 2011-12-16 14:40:00) */
   body {
   min-width:100%;
   max-width:100%;
@@ -70,6 +70,10 @@ hr {
   font-weight:bold;
 }
 
+.cmbx-10x-x-109 {
+  font-weight:bold;
+}
+
 .author {
   padding:0px;
   margin:15px 15px 15px 15px;
@@ -91,12 +95,12 @@ hr {
 img {
   float:right;
   padding:18px 10px 10px 18px;
+                                                                                  
+                                                                                  
 }
 
 .table {
   font-size:14px;
-                                                                                  
-                                                                                  
   line-height:18px;
   float:right;
   padding:10px 30px 15px 30px;
