@@ -16,27 +16,27 @@ movement and a distinctive single-trunked phylogenic tree.
 -------------------------------------------
 
 The manuscript is written in LaTeX.  I've included everything necessary to compile to PDF and to 
-HTML.  Here I have canal.bbl which includes all my references all run through bibtex. In this case, 
+HTML.  Here I have `canal.bbl` which includes all my references all run through `bibtex`. In this case, 
 to compile run:
 
 	pdflatex canal
 	pdflatex canal
 	
-This will produce a PDF entitled canal.pdf.  If you want HTML output, run:
+This will produce a PDF entitled `canal.pdf`.  If you want HTML output, run:
 
 	htlatex canal ms
 	
-This uses ms.cfg and ms.css to style the resulting HTML output.  This produces a file entitled 
-canal.html.  There were a couple of styling issues that I couldn't take care of through the 
+This uses `ms.cfg` and `ms.css` to style the resulting HTML output.  This produces a file entitled 
+`canal.html`.  There were a couple of styling issues that I couldn't take care of through the 
 stylesheet and so I added a small Ruby script to do some post-hoc styling.  Run:
 
 	ruby clean.rb canal.html
 
 -------------------------------------------
 
-Additionally, I've made use of GitHub pages.  This repository is stored in the branch gh-pages.  
-This causes files to be published at trvrb.github.com/canalization/. Here, I've renamed canal.html to
-index.html.  A full compile is possible with:
+Additionally, I've made use of GitHub pages.  This repository is stored in the branch `gh-pages`.  
+This causes files to be published at `trvrb.github.com/canalization/`. Here, I've renamed `canal.html` to
+`index.html`.  A full compile is possible with:
 
 	pdflatex canal
 	pdflatex canal
