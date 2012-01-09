@@ -44,6 +44,12 @@ index.html.  A full compile is possible with:
 	ruby clean.rb canal
 	mv canal.html index.html
 
+Alternatively:
+
+	ruby textile.rb canal
+	
+will do all the above.	
+
 -------------------------------------------
 
 All text is copyright Bedford, Rambaut and Pascual 2011. Distributed under the GPL v3.
