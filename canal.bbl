@@ -66,6 +66,13 @@ Smith DJ, Lapedes AS, de~Jong JC, Bestebroer TM, Rimmelzwaan GF, et~al. (2004)
 \newblock Science 305: 371--376.
 \bibAnnoteFile{Smith04}
 
+\bibitem{Koelle11}
+Koelle K, Ratmann O, Rasmussen D, Pasour V, Mattingly J (2011) A dimensionless
+  number for understanding the evolutionary dynamics of antigenically variable
+  rna viruses.
+\newblock Proc R Soc Lond B Biol Sci Advance access.
+\bibAnnoteFile{Koelle11}
+
 \bibitem{Monto93}
 Monto A, Sullivan K (1993) {Acute respiratory illness in the community.
   Frequency of illness and the agents involved.}
@@ -91,6 +98,11 @@ Bedford T, Cobey S, Pascual M (2011) Strength and temp of selection revealed in
 \newblock BMC Evol Biol 11: 220.
 \bibAnnoteFile{BedfordBMC11}
 
+\bibitem{Park07}
+Park S, Krug J (2007) Clonal interference in large populations.
+\newblock Proc Natl Acad Sci USA 104: 18135--18140.
+\bibAnnoteFile{Park07}
+
 \bibitem{Russell08}
 Russell CA, Jones TC, Barr IG, Cox NJ, Garten RJ, et~al. (2008) {The global
   circulation of seasonal influenza A (H3N2) viruses.}
@@ -102,6 +114,12 @@ Bedford T, Cobey S, Beerli P, Pascual M (2010) {Global migration dynamics
   underlie evolution and persistence in human influenza A (H3N2)}.
 \newblock PLoS Pathog 6: e1000918.
 \bibAnnoteFile{Bedford10}
+
+\bibitem{Adams11}
+Adams B, McHardy A (2011) The impact of seasonal and year-round transmission
+  regimes on the evolution of influenza a virus.
+\newblock Proc R Soc B 278: 2249--2256.
+\bibAnnoteFile{Adams11}
 
 \bibitem{Finkelman07}
 Finkelman B, Viboud C, Koelle K, Ferrari M, Bharti N, et~al. (2007) {Global
@@ -223,12 +241,5 @@ Kucharski A, Gog JR (2011) Influenza emergence in the face of evolutionary
   constraints.
 \newblock Proc R Soc Lond B Biol Sci Advance access.
 \bibAnnoteFile{Kucharski11}
-
-\bibitem{Koelle11}
-Koelle K, Ratmann O, Rasmussen D, Pasour V, Mattingly J (2011) A dimensionless
-  number for understanding the evolutionary dynamics of antigenically variable
-  rna viruses.
-\newblock Proc R Soc Lond B Biol Sci Advance access.
-\bibAnnoteFile{Koelle11}
 
 \end{thebibliography}
