@@ -1,4 +1,4 @@
-/* canal.css from canal.tex (TeX4ht, 2012-01-09 14:33:00) */
+/* canal.css from canal.tex (TeX4ht, 2012-01-09 16:47:00) */
   body {
   min-width:100%;
   max-width:100%;
@@ -83,11 +83,20 @@ hr {
   margin:15px 15px 15px 15px;
 }
 
+.date {
+  text-align:center;
+  font-family: Optima; Helvetica; Arial;
+  font-weight: lighter;
+  font-size:18px;
+}
+
 .figure {
   font-size:14px;
   line-height:18px;
   padding: 0px 30px 30px 30px;
   position:relative;
+                                                                                  
+                                                                                  
   width:95%;
   border: 0;
 }
@@ -95,8 +104,6 @@ hr {
 .endfigure {
   border: 0;
 }
-                                                                                  
-                                                                                  
 
 img {
   float:right;
@@ -121,4 +128,6 @@ td {
   line-height:18px;
 }
 
+                                                                                  
+                                                                                  
   

@@ -16,8 +16,14 @@ contents.gsub!(/Table\S+<a \nhref="([a-z0-9\#\-]+)">/) {"<a href=\"" + $1 + "\">
 contents.gsub!(/Fig.\S+<a \nhref="([a-z0-9\#\-]+)">/) {"<a href=\"" + $1 + "\">Fig. "}
 contents.gsub!(/<br \/> <div class="caption"/) {"<img style=\"float:none; padding:0px;\" src=\"spanner.png\"><br><div class=\"caption\""}
 
+# Extract date
+date = ""
+contents.gsub!(/<div class="date" ><span \nclass="cmr-12">([a-zA-Z0-9\,\ ]+)<\/span><\/div>/) { date = $1; ""}
+date = "<div class=\"date\">Last updated " + date + "</div>"
+
 # Output
 outfile.puts contents
+outfile.puts date
 
 # Cleanup directory
 File.delete(filestem + ".4ct") if File::exists?(filestem + ".4ct")

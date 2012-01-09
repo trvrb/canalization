@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
 <!-- html --> 
 <meta name="src" content="canal.tex"> 
-<meta name="date" content="2012-01-09 14:33:00"> 
+<meta name="date" content="2012-01-09 16:47:00"> 
 <link rel="stylesheet" type="text/css" href="canal.css"> 
 </head><body 
 >
@@ -42,7 +42,7 @@ class="cmr-10">Fogarty International Center, National Institutes of Health, Beth
 <sup class="textsuperscript"><span 
 class="cmsy-10">&#8224;</span></sup><span 
 class="cmr-10">Present address: Institute of Evolutionary Biology, University of Edinburgh, Edinburgh, UK.</span></div>
-<div class="date" ></div>
+
 </div>
 <h3 class="likesectionHead"><a 
  id="x1-1000"></a>Abstract</h3>
@@ -222,7 +222,7 @@ the trunk (<a href="#x1-16006r6">Figure S6<!--tex4ht:ref: probtrunk --></a>). Ad
 regular intervals, with less variation of waiting times than expected under a simple
 random process (<a href="#x1-16007r7">Figure S7<!--tex4ht:ref: waittimes --></a>). There is a relative scarcity of mutation events occurring in
 intervals under 1 year and a relative excess of a mutation events occurring in 2&#8211;3 year
-intervals (<a href="#x1-16007r7">Figure S7<!--tex4ht:ref: waittimes --></a>). This pattern arises from clonal interferance between competing
+intervals (<a href="#x1-16007r7">Figure S7<!--tex4ht:ref: waittimes --></a>). This pattern arises from clonal interference between competing
 mutations which reduces variability in the fixation process of adaptive substitutions
 <span class="cite">[<a 
 href="#XPark07">15</a>]</span>.
@@ -382,23 +382,39 @@ class="cmr-8">0</span></sub>
 results in decreased incidence, slower antigenic movement and greater genealogical
 diversity, all distinguishing characteristics of H1N1 influenza and influenza B (<a href="#x1-16008r8">Figure S8<!--tex4ht:ref: h1n1_mut --></a>,
 <a href="#x1-16009r9">Figure S9<!--tex4ht:ref: h1n1_r0 --></a>).
-<!--l. 158--><p class="noindent" >In our model, when antigenic phenotype remains static, there may be multiple consecutive
+<!--l. 158--><p class="noindent" >In many ways, the historical record of influenza evolution provides little data with which to assess
+rates of bifurcation of genetic and antigenic phenotype. We have observed no bifurcations in
+H1N1 influenza from 1918 to 1957 and again from 1977 to 2010, no bifurcations in H2N2
+influenza from 1957 to 1968 and no bifurcations of H3N2 influenza from 1968 to 2010. We have
+observed one bifurcation in influenza B from 1980 to 2010. Thus, ignoring differences
+                                                                                  
+                                                                                  
+between influenza types and subtypes, we have very roughly observed a rate of one major
+bifurcation in 155 years of evolution. In our model, in 20 out of 100 replicate simulations,
+we observe a deep bifurcation in the viral genealogy, which translates to observing
+one deep bifurcation in 200 years of evolution. Thus, we suggest that the 20 of 100
+simulations where deep branching occurs are not necessarily evidence of poor model
+fit.
+<!--l. 160--><p class="noindent" >In our model, when antigenic phenotype remains static, there may be multiple consecutive
 seasons without appreciable incidence (<a href="#x1-3001r1">Figure 1<!--tex4ht:ref: evol -->A</a>), a pattern apparently absent from H3N2
 influenza <span class="cite">[<a 
-href="#XFinkelman07">19</a>]</span>. We suggest that any model exhibiting punctuated evolution broadly consistent
-with the punctuated change seen in the experimental antigenic map will show similar patterns of
-incidence. We can &#8216;fix&#8217; the incidence patterns, but at the cost of too smooth an antigenic map
-                                                                                  
-                                                                                  
-(<a href="#x1-16003r3">Figure S3<!--tex4ht:ref: incmaptree_smooth --></a>). Evolutionary patterns of the neuraminidase (NA) protein may provide an
-explanation. Epitopes in the HA and NA proteins are jointly responsible for determining
-antigenicity <span class="cite">[<a 
-href="#XNelson07NatRevGenet">2</a>]</span>, and it is now clear that levels of adaptive evolution are similar between HA and
-NA <span class="cite">[<a 
-href="#XBhatt11">20</a>]</span>. Thus, changes in NA may be driving incidence patterns as well, resulting
-in an observed timeseries of incidence partially divorced from the antigenic map of
-HA.
-<!--l. 160--><p class="noindent" >It remains a central question as to the extent that short-lived strain-transcending immunity is
+href="#XFinkelman07">19</a>]</span>. Additionally, we observe antigenic trajectories that are more linear and
+deterministic than the highly clustered trajectory observed by Smith et al.&#x00A0;<span class="cite">[<a 
+href="#XSmith04">9</a>]</span>. We suggest that
+any model exhibiting punctuated evolution broadly consistent with the punctuated change seen
+in the experimental antigenic map will show similar patterns of incidence. We can &#8216;fix&#8217; the
+incidence patterns, but at the cost of too smooth an antigenic map (<a href="#x1-16003r3">Figure S3<!--tex4ht:ref: incmaptree_smooth --></a>). Evolutionary
+patterns of the neuraminidase (NA) protein may provide an explanation. Epitopes in the HA and
+NA proteins are jointly responsible for determining antigenicity <span class="cite">[<a 
+href="#XNelson07NatRevGenet">2</a>]</span>, and it is now clear that
+levels of adaptive evolution are similar between HA and NA <span class="cite">[<a 
+href="#XBhatt11">20</a>]</span>. Thus, changes in
+NA may be driving incidence patterns as well, resulting in an observed timeseries of
+incidence partially divorced from the antigenic map of HA. Incorporating antigenic
+evolution of NA could thus yield a rougher antigenic map for HA, more closely matching
+experimental results, while simultaneously yielding smoother year-to-year incidence
+patterns.
+<!--l. 162--><p class="noindent" >It remains a central question as to the extent that short-lived strain-transcending immunity is
 responsible for influenza&#8217;s limited diversity and spindly genealogical tree <span class="cite">[<a 
 href="#XFerguson03">4</a>,&#x00A0;<a 
 href="#XTria05">5</a>]</span>. Our findings
@@ -423,10 +439,12 @@ href="#XVoeten00">22</a>]</span> provides substantial evidence for its
 existence. Instead, we suggest that short-lived strain-transcending immunity does not
 automatically generate antigenic maps and genealogical trees consistent with empirical
 evidence.
-<!--l. 162--><p class="noindent" >
+<!--l. 164--><p class="noindent" >
+                                                                                  
+                                                                                  
 <h4 class="likesubsectionHead"><a 
  id="x1-6000"></a>Linear antigenic movement</h4>
-<!--l. 164--><p class="noindent" >It would seem possible for one viral lineage to move in one antigenic direction, while
+<!--l. 166--><p class="noindent" >It would seem possible for one viral lineage to move in one antigenic direction, while
 another lineage moves tangentially, eventually resulting in two non-interacting viral
 lineages. Instead, we find that only movement in a single antigenic direction is favored.
 The origins of this pattern can be seen in the interaction between virus evolution and
@@ -435,7 +453,7 @@ immunity in the host population, and evolution away from this immunity results i
 canalization of the antigenic phenotype; mutations that continue along the line of primary
 antigenic variation will show a transmission advantage compared to more tangential
 mutations.
-<!--l. 166--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 168--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
                                                                                   
@@ -444,7 +462,7 @@ mutations.
                                                                                   
                                                                                   
 
-<!--l. 168--><p class="noindent" ><img 
+<!--l. 170--><p class="noindent" ><img 
 src="figures/immunity.png" alt="PIC"  
 >
 <img style="float:none; padding:0px;" src="spanner.png"><br><div class="caption" 
@@ -463,8 +481,8 @@ At the end of the simulation several virus phenotypes exist with similar antigen
 all of these phenotypes lie significantly ahead of the peak of host immunity.</span></div><!--tex4ht:label?: x1-6001r3 -->
                                                                                   
                                                                                   
-<!--l. 171--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 173--><p class="noindent" >Following the work of Smith et al.&#x00A0;<span class="cite">[<a 
+<!--l. 173--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 175--><p class="noindent" >Following the work of Smith et al.&#x00A0;<span class="cite">[<a 
 href="#XSmith04">9</a>]</span>, it remained an open question of why a two-dimensional
 map should explain the antigenic variation of H3N2 influenza. Although the authors astutely
 speculated that &#8220;there is a selective advantage for clusters that move away linearly from previous
@@ -477,7 +495,7 @@ selective pressures. This result simultaneously explains the linear pattern of a
 href="#XSmith04">9</a>]</span> and the characteristically spindly genealogical tree <span class="cite">[<a 
 href="#XFitch97">3</a>]</span> exhibited by influenza A
 (H3N2).
-<!--l. 175--><p class="noindent" >To consider to what extent these results were contingent on the dimensionality of the
+<!--l. 177--><p class="noindent" >To consider to what extent these results were contingent on the dimensionality of the
 underlying antigenic model, we further implemented our model in a 10-dimensional
 antigenic space. Here, mutations occur as 10-spheres, but the distance moved by a
 mutation is the same as in the previous two-dimensional formulation. We arrive at nearly
@@ -489,7 +507,7 @@ two-dimensional map is sufficient to explain observed antigenic relationships am
 strains.
 <h4 class="likesubsectionHead"><a 
  id="x1-7000"></a>Winding back the tape</h4>
-<!--l. 179--><p class="noindent" >It seems clear that, in our model, selection reduces the degrees of freedom of antigenic evolution.
+<!--l. 181--><p class="noindent" >It seems clear that, in our model, selection reduces the degrees of freedom of antigenic evolution.
 In light of this, we wanted to examine the degree of stochasticity in replicated evolutionary
 trajectories, and thereby test what happens when we &#8220;wind back the tape&#8221; <span class="cite">[<a 
 href="#XGouldWonderfulLife">23</a>]</span> on the evolution
@@ -503,7 +521,7 @@ timescale of repeatability can be explained by the presence of standing antigeni
 In the initial virus population, there are several novel antigenic variants present at
 low frequency (<a href="#x1-6001r3">Figure 3<!--tex4ht:ref: immunity --></a>), one of which, without fail, comes to predominate the virus
 population.
-<!--l. 181--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 183--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
                                                                                   
@@ -511,7 +529,7 @@ population.
  id="x1-7001r4"></a>
                                                                                   
                                                                                   
-<!--l. 183--><p class="noindent" >                                       <img 
+<!--l. 185--><p class="noindent" >                                       <img 
 src="figures/replicateevol.png" alt="PIC"  
 >
 <img style="float:none; padding:0px;" src="spanner.png"><br><div class="caption" 
@@ -526,8 +544,8 @@ antigenic phenotypes of the 100 replicate simulations and gray lines representin
 of each mean antigenic phenotype.</span></div><!--tex4ht:label?: x1-7001r4 -->
                                                                                   
                                                                                   
-<!--l. 188--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 190--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 190--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 192--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
                                                                                   
@@ -536,7 +554,7 @@ of each mean antigenic phenotype.</span></div><!--tex4ht:label?: x1-7001r4 -->
                                                                                   
                                                                                   
 
-<!--l. 192--><p class="noindent" ><img 
+<!--l. 194--><p class="noindent" ><img 
 src="figures/replicateinc.png" alt="PIC"  
 >
 <img style="float:none; padding:0px;" src="spanner.png"><br><div class="caption" 
@@ -551,8 +569,8 @@ simulations. There is little variability for the first year of replicate simulat
 simulations were initialized with the end state of the 40-year simulation shown in <a href="#x1-3001r1">Figure 1<!--tex4ht:ref: evol --></a>.</span></div><!--tex4ht:label?: x1-7002r5 -->
                                                                                   
                                                                                   
-<!--l. 195--><p class="noindent" ></div><hr class="endfigure">
-<!--l. 197--><p class="noindent" >We see that the initial evolutionary trajectory, during which time standing variation plays out, is
+<!--l. 197--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 199--><p class="noindent" >We see that the initial evolutionary trajectory, during which time standing variation plays out, is
 highly repeatable, and thus predictable given enough information and the right methods of
 analysis. However, prediction of longer-term evolutionary scenarios will necessarily be difficult or
 impossible except in a vague sense. Through careful surveillance efforts and genetic and antigenic
@@ -561,7 +579,7 @@ strain recommendations <span class="cite">[<a
 href="#XBarr10">24</a>]</span>. It should be possible to combine these sorts of modeling approaches
 with surveillance data to gauge the likelihood that a sampled variant will spread through the
 population.
-<!--l. 199--><p class="noindent" >Recent work on empirical fitness landscapes has shown that natural selection follows few
+<!--l. 201--><p class="noindent" >Recent work on empirical fitness landscapes has shown that natural selection follows few
 mutational paths <span class="cite">[<a 
 href="#XWeinreich06">25</a>]</span>. The spindly genealogical tree and the almost linear serial replacement of
 influenza strains has remained a puzzling phenomenon. We suggest that the evolutionary and
@@ -571,16 +589,17 @@ and so sacrifices long-term gains for short-term advantages. The result is a can
 trajectory lacking antigenic diversification.
 <h3 class="likesectionHead"><a 
  id="x1-8000"></a>Materials and Methods</h3>
-<!--l. 203--><p class="noindent" >
+<!--l. 205--><p class="noindent" >
 <h4 class="likesubsectionHead"><a 
  id="x1-9000"></a>Transmission model</h4>
-<!--l. 205--><p class="noindent" >To characterize the joint epidemiological, genealogical, antigenic and spatial patterns of influenza,
-we implemented a large-scale individual-based model. This model consists of daily time steps,
+<!--l. 207--><p class="noindent" >To characterize the joint epidemiological, genealogical, antigenic and spatial patterns of
+influenza, we implemented a large-scale individual-based model (full simulation source code
+available at http://github.com/trvrb/antigen). This model consists of daily time steps,
 in which the states of hosts and viruses are updated. Hosts may be born, may die,
 may contact other hosts allowing viral transmission, or may recover from infection.
 Viruses may mutate in antigenic phenotype. Each simulation ran for 40 years of model
 time.
-<!--l. 207--><p class="noindent" >Hosts in this model are divided between three regions: North, South and Tropics. There are 30
+<!--l. 209--><p class="noindent" >Hosts in this model are divided between three regions: North, South and Tropics. There are 30
 million hosts within each of the three regions, giving <span 
 class="cmmi-10x-x-109">N </span>= 9 <span 
 class="cmsy-10x-x-109">&#x00D7; </span>10<sup><span 
@@ -615,11 +634,11 @@ class="cmmi-10x-x-109">.</span>2 per
 host per day, so that <span 
 class="cmmi-10x-x-109">R</span><sub><span 
 class="cmr-8">0</span></sub> in a naive host population is 1.8. An individual cannot be
+                                                                                  
+                                                                                  
 simultaneously infected with multiple virus lineages; there is no super-infection in the
-                                                                                  
-                                                                                  
 model.
-<!--l. 209--><p class="noindent" >Each virus possesses an antigenic phenotype, represented as a location in Euclidean space. Here,
+<!--l. 211--><p class="noindent" >Each virus possesses an antigenic phenotype, represented as a location in Euclidean space. Here,
 we primarily use a two-dimensional antigenic location. After recovery, a host &#8216;remembers&#8217; the
 phenotype of its infecting virus as part of its immune history. When a contact event occurs and a
 virus attempts to infect a host, the Euclidean distance from infecting phenotype <span 
@@ -653,17 +672,18 @@ The initial host population begins with enough immunity to slow down the initial
 virus upswing and place the dynamics closer to their equilibrium state; initial <span 
 class="cmmi-10x-x-109">R </span>was
 1.28.
-<!--l. 211--><p class="noindent" >Our model follows Gog and Grenfell <span class="cite">[<a 
-href="#XGog02">26</a>]</span> in representing antigenic distance as distance between
-points in a geometric space. By forcing one-dimension to directly modulate <span 
-class="cmmi-10x-x-109">&#x03B2;</span>, Gog and Grenfell
-find an orderly replacement of strains. Kryazhimskiy et al. <span class="cite">[<a 
-href="#XKryazhimskiy07">27</a>]</span> use a two-dimensional
-strain-space, but enforce a cross-immunity kernel that directly favors moving along a diagonal
-line away from previous strains. Our model does not &#8216;build in&#8217; the one-dimensional
-direction of antigenic drift, which instead emerges dynamically from competition among
-strains.
-<!--l. 213--><p class="noindent" >The initial virus population consisted of 10 infections each with the identical antigenic phenotype
+<!--l. 213--><p class="noindent" >Our model follows Lin et al.&#x00A0;<span class="cite">[<a 
+href="#XLin99">26</a>]</span> and Gog and Grenfell <span class="cite">[<a 
+href="#XGog02">27</a>]</span> in representing antigenic distance as
+distance between points in a geometric space. By forcing one-dimension to directly modulate <span 
+class="cmmi-10x-x-109">&#x03B2;</span>,
+Gog and Grenfell find an orderly replacement of strains. Kryazhimskiy et al. <span class="cite">[<a 
+href="#XKryazhimskiy07">28</a>]</span> use a
+two-dimensional strain-space, but enforce a cross-immunity kernel that directly favors moving
+along a diagonal line away from previous strains. Our model does not &#8216;build in&#8217; the
+one-dimensional direction of antigenic drift, which instead emerges dynamically from competition
+among strains.
+<!--l. 215--><p class="noindent" >The initial virus population consisted of 10 infections each with the identical antigenic phenotype
 of <span 
 class="cmsy-10x-x-109">{</span>0<span 
 class="cmmi-10x-x-109">,</span>0<span 
@@ -678,27 +698,29 @@ When a mutation occurs, the virus&#8217;s phenotype is moved in a completely ran
 class="cmsy-10x-x-109">~</span> Uniform(0<span 
 class="cmmi-10x-x-109">,</span>360) degrees. Mutation size is sampled from the distribution <span 
 class="cmsy-10x-x-109">~</span> Gamma(<span 
-class="cmmi-10x-x-109">&#x03B1;,&#x03B2;</span>), where
-<span 
+class="cmmi-10x-x-109">&#x03B1;,&#x03B2;</span>),
+where <span 
 class="cmmi-10x-x-109">&#x03B1; </span>and <span 
-class="cmmi-10x-x-109">&#x03B2; </span>are chosen to give a mean mutation size of 0.6 units and a standard deviation of 0.4
-units. This distribution is parameterized so that mutation usually has little effect on
-antigenic phenotype, but occasionally has a large effect. This is similar to the neutral
-networks implemented by Koelle et al. <span class="cite">[<a 
-href="#XKoelle06">6</a>]</span>, wherein most amino acid changes result in little
-decrease to cross-immunity between strains, but some changes result in large jumps in
-cross-immunity.
-<!--l. 215--><p class="noindent" >
+class="cmmi-10x-x-109">&#x03B2; </span>are chosen to give a mean mutation size of 0.6 units and a standard
+deviation of 0.4 units. This distribution is parameterized so that mutation usually
+has little effect on antigenic phenotype, but occasionally has a large effect. This is
+similar to the neutral networks implemented by Koelle et al. <span class="cite">[<a 
+href="#XKoelle06">6</a>]</span>, wherein most amino
+acid changes result in little decrease to cross-immunity between strains, but some
+changes result in large jumps in cross-immunity. This mutation model implicitly assumes
+independence between mutations; each mutation&#8217;s effect is independent of genetic
+background.
+<!--l. 217--><p class="noindent" >
 <h4 class="likesubsectionHead"><a 
  id="x1-10000"></a>Model output</h4>
-<!--l. 217--><p class="noindent" >Daily incidence and prevalence are recorded for each region. During the course of the simulation,
+<!--l. 219--><p class="noindent" >Daily incidence and prevalence are recorded for each region. During the course of the simulation,
 samples of current infections are taken from the evolving virus population at a rate proportional
 to prevalence. Each viral infection is assigned a unique ID, and in addition, infections have their
+                                                                                  
+                                                                                  
 phenotypes, locations and dates of infection recorded. In this model, viruses lack sequences and
 so standard phylogenetic inference of the evolutionary relationships among strains is impossible.
 Instead, the viral genealogy is directly recorded. This is made possible by tracking transmission
-                                                                                  
-                                                                                  
 events connecting infections during the simulation; infections record the ID of their
 &#8216;parent&#8217; infection. Proceeding from a sample of infections, their genealogical history can
 be reconstructed by following consecutive links to parental infections. During this
@@ -708,32 +730,32 @@ Commonly, phylodynamic simulations generate sequences that are subsequently anal
 with phylogenetic software to produce an estimated genealogy <span class="cite">[<a 
 href="#XFerguson03">4</a>,&#x00A0;<a 
 href="#XKoelle06">6</a>,&#x00A0;<a 
-href="#XKoelle10">28</a>]</span>. This step of
+href="#XKoelle10">29</a>]</span>. This step of
 phylogenetic inference is imperfect and computationally intensive, and by side-stepping
 phylogenetic reconstruction we arrive at genealogies quickly and accurately. Other authors
 have implemented similar tracking of infection trees <span class="cite">[<a 
-href="#XVolz09">29</a>,&#x00A0;<a 
-href="#XOdea11">30</a>]</span>. This genealogy-centric
+href="#XVolz09">30</a>,&#x00A0;<a 
+href="#XOdea11">31</a>]</span>. This genealogy-centric
 approach makes many otherwise difficult calculations transparent, such as calculating
 lineage-specific region-specific migration rates (<a href="#x1-3003r2">Figure 2<!--tex4ht:ref: spatial --></a>) and lineage-specific mutation effects
 (<a href="#x1-16005r5">Figure S5<!--tex4ht:ref: mutspectrum --></a>).
-<!--l. 219--><p class="noindent" >Infections are sampled at a rate designed to give approximately 6000 samples over the course of
+<!--l. 221--><p class="noindent" >Infections are sampled at a rate designed to give approximately 6000 samples over the course of
 the simulation, with genealogies constructed from a subsample of approximately 300 samples.
 The results presented in <a href="#x1-3001r1">Figure 1<!--tex4ht:ref: evol --></a> represent a single representative model output; one hundred
 replicate simulations were conducted to arrive at statistical estimates.
-<!--l. 221--><p class="noindent" >
+<!--l. 223--><p class="noindent" >
 <h4 class="likesubsectionHead"><a 
  id="x1-11000"></a>Parameter selection and sensitivity analysis</h4>
-<!--l. 223--><p class="noindent" >Estimating what the basic reproductive number <span 
+<!--l. 225--><p class="noindent" >Estimating what the basic reproductive number <span 
 class="cmmi-10x-x-109">R</span><sub><span 
 class="cmr-8">0</span></sub> for seasonal influenza would be in a naive
 population is notoriously difficult. Season-to-season estimates of effective reproductive number <span 
 class="cmmi-10x-x-109">R</span>
 for the USA and France gathered from mortality timeseries display an interquartile range of
 0.9&#8211;1.8 <span class="cite">[<a 
-href="#XChowell08">31</a>]</span>. Geographic spread within the USA suggests an average seasonal <span 
+href="#XChowell08">32</a>]</span>. Geographic spread within the USA suggests an average seasonal <span 
 class="cmmi-10x-x-109">R </span>of 1.35 <span class="cite">[<a 
-href="#XViboud06">32</a>]</span>.
+href="#XViboud06">33</a>]</span>.
 These estimates of <span 
 class="cmmi-10x-x-109">R </span>will be lower than the <span 
 class="cmmi-10x-x-109">R</span><sub><span 
@@ -743,12 +765,12 @@ class="cmmi-10x-x-109">R</span><sub><span
 class="cmr-8">0</span></sub> of 1.8, consistent with the upper range of seasonal estimates. Duration of
 infection was chosen based on patterns of viral shedding shown during challenge studies
 <span class="cite">[<a 
-href="#XCarrat08">33</a>]</span>. The linear form of the risk of infection and its increase as a function of antigenic
+href="#XCarrat08">34</a>]</span>. The linear form of the risk of infection and its increase as a function of antigenic
 distance <span 
 class="cmmi-10x-x-109">s </span>was chosen as 0.07 based on experimental work on equine influenza <span class="cite">[<a 
-href="#XPark09">34</a>]</span> and
+href="#XPark09">35</a>]</span> and
 from studies of vaccine effectiveness <span class="cite">[<a 
-href="#XGupta06">35</a>]</span>. Between-region contact rate <span 
+href="#XGupta06">36</a>]</span>. Between-region contact rate <span 
 class="cmmi-10x-x-109">m </span>was chosen to
 yield a trunk lineage that resides predominantly in the tropics. With much higher
 rates of mixing, the trunk lineage ceases to show a preference the tropics, and with
@@ -757,8 +779,8 @@ skipped. The amplitude of seasonal forcing <span
 class="cmmi-10x-x-109">&#x03F5; </span>was chosen to be just large enough to get
 consistent fade-outs in the summer months and is consistent with empirical estimates
 <span class="cite">[<a 
-href="#XTruscott11">36</a>]</span>.
-<!--l. 225--><p class="noindent" >Mutational parameters were based, in part, on model behavior. We assumed 10 amino acid sites
+href="#XTruscott11">37</a>]</span>.
+<!--l. 227--><p class="noindent" >Mutational parameters were based, in part, on model behavior. We assumed 10 amino acid sites
 involved in antigenicity, each mutating at a rate of 10<sup><span 
 class="cmsy-8">-</span><span 
 class="cmr-8">5</span></sup> <span class="cite">[<a 
@@ -768,13 +790,13 @@ class="cmmi-10x-x-109">&#x03BC; </span>= 10<sup><span
 class="cmsy-8">-</span><span 
 class="cmr-8">4</span></sup> per infection per day. We chose mutational effect parameters (mean = 0<span 
 class="cmmi-10x-x-109">.</span>6,
+                                                                                  
+                                                                                  
 sd = 0<span 
 class="cmmi-10x-x-109">.</span>4) that would give suitably fast rates of antigenic evolution corresponding to
 approximately 1.2 units of antigenic change per year, while simultaneously giving clustered
 patterns of antigenic evolution <span class="cite">[<a 
 href="#XSmith04">9</a>]</span>. Similar outcomes are possible under a variety of
-                                                                                  
-                                                                                  
 parameterizations. If mutations are more common (<span 
 class="cmmi-10x-x-109">&#x03BC; </span>= 3 <span 
 class="cmsy-10x-x-109">&#x00D7; </span>10<sup><span 
@@ -799,15 +821,15 @@ mutational parameters to some extent. Less mutational input and higher <span
 class="cmmi-10x-x-109">R</span><sub><span 
 class="cmr-8">0</span></sub> will give similar
 patterns of antigenic drift and seasonal incidence. Similarly, Kucharski and Gog <span class="cite">[<a 
-href="#XKucharski11">37</a>]</span>
+href="#XKucharski11">38</a>]</span>
 find that increasing <span 
 class="cmmi-10x-x-109">R</span><sub><span 
 class="cmr-8">0</span></sub> results in increased rates of emergence of antigenically novel
 strains.
-<!--l. 227--><p class="noindent" >
+<!--l. 229--><p class="noindent" >
 <h4 class="likesubsectionHead"><a 
  id="x1-12000"></a>Antigenic map</h4>
-<!--l. 229--><p class="noindent" >Antigenic phenotypes are modeled as discrete entities on the Euclidean plane; multiple samples
+<!--l. 231--><p class="noindent" >Antigenic phenotypes are modeled as discrete entities on the Euclidean plane; multiple samples
 have the same antigenic location. However, in the empirical antigenic map of influenza A (H3N2),
 each strain appears in a unique location <span class="cite">[<a 
 href="#XSmith04">9</a>]</span>. We would argue that some of this pattern comes
@@ -820,7 +842,7 @@ for an exponentially distributed distance with mean of 0.53 antigenic units. If 
 samples with the same underlying antigenic phenotype are jittered in this fashion, the
 distance between them averages 0.83 antigenic units with a standard deviation of 0.64
 units.
-<!--l. 231--><p class="noindent" >We added noise to each of the 5943 sampled viruses in this fashion resulting in an approximated
+<!--l. 233--><p class="noindent" >We added noise to each of the 5943 sampled viruses in this fashion resulting in an approximated
 antigenic map (<a href="#x1-3001r1">Figure 1<!--tex4ht:ref: evol -->D</a>). Virus samples were then clustering following standard clustering
 algorithms. We tried clustering by the <span 
 class="cmmi-10x-x-109">k</span>-means algorithm and also agglomerative hierarchical
@@ -828,19 +850,19 @@ clustering with a variety of linkage criterion. We found that clustering by Ward
 consistently outperformed other methods, when measured in terms of within-cluster and
 between-cluster variances. However, the exact clustering algorithm had little effect on our overall
 results.
-<!--l. 234--><p class="noindent" >
+<!--l. 236--><p class="noindent" >
 <h4 class="likesubsectionHead"><a 
  id="x1-13000"></a>Acknowledgments</h4>
-<!--l. 235--><p class="noindent" >We would like to thank Sarah Cobey, Aaron King, Pejman Rohani and the attendees of the 2011
+<!--l. 237--><p class="noindent" >We would like to thank Sarah Cobey, Aaron King, Pejman Rohani and the attendees of the 2011
 RAPIDD Workshop on Phylodynamics for helpful discussion. We would also like to thank Ed
+                                                                                  
+                                                                                  
 Baskerville and Daniel Zinder for programming advice. The term &#8216;canalization&#8217; was originally
 suggested by Micaela Martinez-Bakker.
-                                                                                  
-                                                                                  
-<!--l. 238--><p class="noindent" >
+<!--l. 240--><p class="noindent" >
 <h4 class="likesubsectionHead"><a 
  id="x1-14000"></a>Funding</h4>
-<!--l. 239--><p class="noindent" >TB is supported by the Howard Hughes Medical Institute and by the European Molecular
+<!--l. 241--><p class="noindent" >TB is supported by the Howard Hughes Medical Institute and by the European Molecular
 Biology Organization. AR works as a part of the Interdisciplinary Centre for Human and Avian
 Influenza Research (ICHAIR) and the University of Edinburgh&#8217;s Centre for Immunity,
 Infection and Evolution (CIIE). MP is an investigator of the Howard Hughes Medical
@@ -875,12 +897,12 @@ class="cmr-12">References</span></h3>
     5.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XTria05"></a>Tria F, Lässig M, Peliti L, S F (2005) A minimal stochastic model for influenza
       evolution. J Stat Mech .
+                                                                                  
+                                                                                  
       </p>
       <p class="bibitem" ><span class="biblabel">
     6.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XKoelle06"></a>Koelle  K,  Cobey  S,  Grenfell  B,  Pascual  M  (2006)  Epochal  evolution  shapes
-                                                                                  
-                                                                                  
       the phylodynamics of interpandemic influenza A (H3N2) in humans.  Science 314:
       1898&#8211;1903.
       </p>
@@ -923,9 +945,9 @@ class="cmr-12">References</span></h3>
  id="XRambaut08"></a>Rambaut A, Pybus OG, Nelson MI, Viboud C, Taubenberger JK, et&#x00A0;al. (2008)
       The genomic and epidemiological dynamics of human influenza A virus. Nature 453:
       615&#8211;619.
+                                                                                  
+                                                                                  
       </p>
-                                                                                  
-                                                                                  
       <p class="bibitem" ><span class="biblabel">
    14.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XBedfordBMC11"></a>Bedford T, Cobey S, Pascual M (2011) Strength and temp of selection revealed
@@ -969,11 +991,11 @@ class="cmr-12">References</span></h3>
       epidemic sizes of influenza A/H1N1, A/H3N2, and B: a statistical method.  PLoS
       Med In press.
       </p>
+                                                                                  
+                                                                                  
       <p class="bibitem" ><span class="biblabel">
    22.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XVoeten00"></a>Voeten J, Bestebroer T, Nieuwkoop N, Fouchier R, Osterhaus A, et&#x00A0;al. (2000)
-                                                                                  
-                                                                                  
       Antigenic  drift  in  the  influenza  A  virus  (H3N2)  nucleoprotein  and  escape  from
       recognition by cytotoxic T lymphocytes. J Virol 74: 6800&#8211;6807.
       </p>
@@ -996,79 +1018,86 @@ class="cmr-12">References</span></h3>
       </p>
       <p class="bibitem" ><span class="biblabel">
    26.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XLin99"></a>Lin J, Andreasen V, Levin S (1999) Dynamics of influenza a drift: the linear
+      three-strain model. Math Biosci 162: 33&#8211;51.
+      </p>
+      <p class="bibitem" ><span class="biblabel">
+   27.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XGog02"></a>Gog J, Grenfell B (2002) Dynamics and selection of many-strain pathogens. Proc
       Natl Acad Sci USA 99: 17209&#8211;17214.
       </p>
       <p class="bibitem" ><span class="biblabel">
-   27.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+   28.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XKryazhimskiy07"></a>Kryazhimskiy  S,  Dieckmann  U,  Levin  S,  Dushoff  J  (2007)  On  state-space
       reduction in multi-strain pathogen models, with an application to antigenic drift in
       influenza A. PLoS Comp Biol 3: e159.
       </p>
       <p class="bibitem" ><span class="biblabel">
-   28.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+   29.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XKoelle10"></a>Koelle  K,  Khatri  P,  Kamradt  M,  Kepler  T  (2010)  A  two-tiered  model  for
       simulating the ecological and evolutionary dynamics of rapidly evolving viruses, with
       an application to influenza. J R Soc Interface 7: 1257&#8211;1274.
       </p>
+                                                                                  
+                                                                                  
       <p class="bibitem" ><span class="biblabel">
-   29.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+   30.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XVolz09"></a>Volz  E,  Kosakovsky&#x00A0;Pond  S,  Ward  M,  Leigh&#x00A0;Brown  A,  Frost  S  (2009)
       Phylodynamics of infectious disease epidemics. Genetics 183: 1421&#8211;1430.
       </p>
       <p class="bibitem" ><span class="biblabel">
-   30.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+   31.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XOdea11"></a>O&#8217;Dea E, Wilke C (2011) Contact heterogeneity and phylodynamics: how contact
-                                                                                  
-                                                                                  
       networks shape parasite evolutionary trees.  Interdiscip Perspect Infect Dis 2011:
       238743.
       </p>
       <p class="bibitem" ><span class="biblabel">
-   31.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+   32.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XChowell08"></a>Chowell G, Miller M, Viboud C (2008) Seasonal influenza in the United States,
       France, and Australia: transmission and prospects for control. Epidemiol Infect 136:
       852&#8211;864.
       </p>
       <p class="bibitem" ><span class="biblabel">
-   32.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+   33.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XViboud06"></a>Viboud C, Bjørnstad O, Smith D, Simonsen L, Miller M, et&#x00A0;al. (2006) Synchrony,
       waves, and spatial hierarchies in the spread of influenza. Science 312: 447&#8211;451.
       </p>
       <p class="bibitem" ><span class="biblabel">
-   33.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+   34.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XCarrat08"></a>Carrat F, Vergu E, Ferguson NM, Lemaitre M, Cauchemez S, et&#x00A0;al. (2008) Time
       lines of infection and disease in human influenza: a review of volunteer challenge
       studies. Am J Epidemiol 167: 775&#8211;785.
       </p>
       <p class="bibitem" ><span class="biblabel">
-   34.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+   35.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XPark09"></a>Park A, Daly J, Lewis N, Smith D, Wood J, et&#x00A0;al. (2009) Quantifying the impact
       of immune escape on transmission dynamics of influenza. Science 326: 726&#8211;728.
       </p>
       <p class="bibitem" ><span class="biblabel">
-   35.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+   36.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XGupta06"></a>Gupta V, Earl D, Deem M (2006) Quantifying influenza vaccine efficacy and
       antigenic distance. Vaccine 24: 3881&#8211;3888.
       </p>
       <p class="bibitem" ><span class="biblabel">
-   36.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+   37.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XTruscott11"></a>Truscott J, Fraser C, Cauchemez S, Meeyai A, Hinsley W, et&#x00A0;al. (2011) Essential
       epidemiological  mechanisms  underpinning  the  transmission  dynamics  of  seasonal
       influenza. J R Soc Interface In press.
       </p>
+                                                                                  
+                                                                                  
       <p class="bibitem" ><span class="biblabel">
-   37.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+   38.<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XKucharski11"></a>Kucharski A, Gog JR (2011) Influenza emergence in the face of evolutionary
       constraints. Proc R Soc Lond B Biol Sci Advance access.
 </p>
       </div>
                                                                                   
                                                                                   
-<!--l. 254--><p class="noindent" >
+<!--l. 256--><p class="noindent" >
 <h3 class="likesectionHead"><a 
  id="x1-16000"></a>Supporting Information</h3>
-<!--l. 258--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 260--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
                                                                                   
@@ -1077,7 +1106,7 @@ class="cmr-12">References</span></h3>
                                                                                   
                                                                                   
 
-<!--l. 260--><p class="noindent" ><img 
+<!--l. 262--><p class="noindent" ><img 
 src="figures/phenotypes.png" alt="PIC"  
 >
 <img style="float:none; padding:0px;" src="spanner.png"><br><div class="caption" 
@@ -1092,10 +1121,10 @@ relative to time of virus sampling. Viruses were sampled at a constant rate prop
 prevalence and coloring was determined from the antigenic map in <a href="#x1-3001r1">Figure 1<!--tex4ht:ref: evol -->D</a>.</span></div><!--tex4ht:label?: x1-16001r1 -->
                                                                                   
                                                                                   
-<!--l. 263--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 265--><p class="noindent" ></div><hr class="endfigure">
                                                                                   
                                                                                   
-<!--l. 270--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 272--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
                                                                                   
@@ -1104,7 +1133,7 @@ prevalence and coloring was determined from the antigenic map in <a href="#x1-30
                                                                                   
                                                                                   
 
-<!--l. 272--><p class="noindent" ><img 
+<!--l. 274--><p class="noindent" ><img 
 src="figures/driftvsinc.png" alt="PIC"  
 >
 <img style="float:none; padding:0px;" src="spanner.png"><br><div class="caption" 
@@ -1117,10 +1146,10 @@ Individual pairs of measurements are shown as gray points and a locally-linear r
 (LOESS) is shown as a black dashed line.</span></div><!--tex4ht:label?: x1-16002r2 -->
                                                                                   
                                                                                   
-<!--l. 275--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 277--><p class="noindent" ></div><hr class="endfigure">
                                                                                   
                                                                                   
-<!--l. 282--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 284--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
                                                                                   
@@ -1128,7 +1157,7 @@ Individual pairs of measurements are shown as gray points and a locally-linear r
  id="x1-16003r3"></a>
                                                                                   
                                                                                   
-<!--l. 284--><p class="noindent" >                                       <img 
+<!--l. 286--><p class="noindent" >                                       <img 
 src="figures/incmaptree_smooth.png" alt="PIC"  
 >
 <br />  <div class="caption" 
@@ -1149,10 +1178,10 @@ class="cmr-8">4</span></sup>, mean mutation
 size of 0.6 units and standard deviation of mutation size of 0.2 units.</span></div><!--tex4ht:label?: x1-16003r3 -->
                                                                                   
                                                                                   
-<!--l. 289--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 291--><p class="noindent" ></div><hr class="endfigure">
                                                                                   
                                                                                   
-<!--l. 296--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 298--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
                                                                                   
@@ -1160,7 +1189,7 @@ size of 0.6 units and standard deviation of mutation size of 0.2 units.</span></
  id="x1-16004r4"></a>
                                                                                   
                                                                                   
-<!--l. 298--><p class="noindent" >                                       <img 
+<!--l. 300--><p class="noindent" >                                       <img 
 src="figures/incmaptree_rough.png" alt="PIC"  
 >
 <br />  <div class="caption" 
@@ -1181,10 +1210,10 @@ class="cmr-8">5</span></sup>, mean mutation
 size of 0.7 units and standard deviation of mutation size of 0.5 units.</span></div><!--tex4ht:label?: x1-16004r4 -->
                                                                                   
                                                                                   
-<!--l. 303--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 305--><p class="noindent" ></div><hr class="endfigure">
                                                                                   
                                                                                   
-<!--l. 310--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 312--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
                                                                                   
@@ -1192,7 +1221,7 @@ size of 0.7 units and standard deviation of mutation size of 0.5 units.</span></
  id="x1-16005r5"></a>
                                                                                   
                                                                                   
-<!--l. 312--><p class="noindent" >                                       <img 
+<!--l. 314--><p class="noindent" >                                       <img 
 src="figures/mutspectrum.png" alt="PIC"  
 >
 <img style="float:none; padding:0px;" src="spanner.png"><br><div class="caption" 
@@ -1208,10 +1237,10 @@ along the primary and secondary axes of antigenic variation across 80 replicate 
 Histograms were constructed from 21,405 side branch mutations and 1584 trunk mutations.</span></div><!--tex4ht:label?: x1-16005r5 -->
                                                                                   
                                                                                   
-<!--l. 317--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 319--><p class="noindent" ></div><hr class="endfigure">
                                                                                   
                                                                                   
-<!--l. 324--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 326--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
                                                                                   
@@ -1220,7 +1249,7 @@ Histograms were constructed from 21,405 side branch mutations and 1584 trunk mut
                                                                                   
                                                                                   
 
-<!--l. 326--><p class="noindent" ><img 
+<!--l. 328--><p class="noindent" ><img 
 src="figures/probtrunk.png" alt="PIC"  
 >
 <img style="float:none; padding:0px;" src="spanner.png"><br><div class="caption" 
@@ -1236,10 +1265,10 @@ the mutation is part of the trunk. Mutations of large effect are increasingly ra
 they do occur are increasingly likely to be part of the trunk.</span></div><!--tex4ht:label?: x1-16006r6 -->
                                                                                   
                                                                                   
-<!--l. 329--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 331--><p class="noindent" ></div><hr class="endfigure">
                                                                                   
                                                                                   
-<!--l. 336--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 338--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
                                                                                   
@@ -1248,7 +1277,7 @@ they do occur are increasingly likely to be part of the trunk.</span></div><!--t
                                                                                   
                                                                                   
 
-<!--l. 338--><p class="noindent" ><img 
+<!--l. 340--><p class="noindent" ><img 
 src="figures/waittimes.png" alt="PIC"  
 >
 <img style="float:none; padding:0px;" src="spanner.png"><br><div class="caption" 
@@ -1266,10 +1295,10 @@ mutation  after  a  specific  waiting  time.  The  dashed  line  shows  the  mem
 function of the Poisson process expectation.</span></div><!--tex4ht:label?: x1-16007r7 -->
                                                                                   
                                                                                   
-<!--l. 341--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 343--><p class="noindent" ></div><hr class="endfigure">
                                                                                   
                                                                                   
-<!--l. 348--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 350--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
                                                                                   
@@ -1277,7 +1306,7 @@ function of the Poisson process expectation.</span></div><!--tex4ht:label?: x1-1
  id="x1-16008r8"></a>
                                                                                   
                                                                                   
-<!--l. 350--><p class="noindent" >                                       <img 
+<!--l. 352--><p class="noindent" >                                       <img 
 src="figures/h1n1_mut.png" alt="PIC"  
 >
 <br />  <div class="caption" 
@@ -1298,10 +1327,10 @@ class="cmr-8">5</span></sup>, mean mutation size is 0.42 units and standard devi
 mutation size is 0.28 units.</span></div><!--tex4ht:label?: x1-16008r8 -->
                                                                                   
                                                                                   
-<!--l. 355--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 357--><p class="noindent" ></div><hr class="endfigure">
                                                                                   
                                                                                   
-<!--l. 362--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 364--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
                                                                                   
@@ -1309,7 +1338,7 @@ mutation size is 0.28 units.</span></div><!--tex4ht:label?: x1-16008r8 -->
  id="x1-16009r9"></a>
                                                                                   
                                                                                   
-<!--l. 364--><p class="noindent" >                                       <img 
+<!--l. 366--><p class="noindent" >                                       <img 
 src="figures/h1n1_r0.png" alt="PIC"  
 >
 <br />  <div class="caption" 
@@ -1332,10 +1361,10 @@ class="cmr-8">0</span></sub> = 1<span
 class="cmmi-10x-x-109">.</span>5.</span></div><!--tex4ht:label?: x1-16009r9 -->
                                                                                   
                                                                                   
-<!--l. 369--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 371--><p class="noindent" ></div><hr class="endfigure">
                                                                                   
                                                                                   
-<!--l. 376--><p class="noindent" ><hr class="figure"><div class="figure" 
+<!--l. 378--><p class="noindent" ><hr class="figure"><div class="figure" 
 >
                                                                                   
                                                                                   
@@ -1343,7 +1372,7 @@ class="cmmi-10x-x-109">.</span>5.</span></div><!--tex4ht:label?: x1-16009r9 -->
  id="x1-16010r10"></a>
                                                                                   
                                                                                   
-<!--l. 378--><p class="noindent" >                                       <img 
+<!--l. 380--><p class="noindent" >                                       <img 
 src="figures/10dgrid.png" alt="PIC"  
 >
 <img style="float:none; padding:0px;" src="spanner.png"><br><div class="caption" 
@@ -1360,10 +1389,11 @@ contribution to antigenic variation. Each panel shows a two-dimensional slice of
 rotated space. Principal components 7&#8211;10 were left out of the figure for clarity.</span></div><!--tex4ht:label?: x1-16010r10 -->
                                                                                   
                                                                                   
-<!--l. 383--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 385--><p class="noindent" ></div><hr class="endfigure">
  
 </body></html> 
 
                                                                                   
 
 
+<div class="date">Last updated January 9, 2012</div>

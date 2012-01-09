@@ -78,6 +78,13 @@ hr {
 	margin:15px 15px 15px 15px;
 }
 
+.date {
+	text-align:center;
+	font-family: Optima; Helvetica; Arial;
+	font-weight: lighter;
+	font-size:18px;	
+}
+
 .figure {
 	font-size:14px;
 	line-height:18px; 	

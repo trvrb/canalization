@@ -167,6 +167,12 @@ Weinreich D, Delaney N, DePristo M, Hartl D (2006) {Darwinian evolution can
 \newblock Science 312: 111--114.
 \bibAnnoteFile{Weinreich06}
 
+\bibitem{Lin99}
+Lin J, Andreasen V, Levin S (1999) Dynamics of influenza a drift: the linear
+  three-strain model.
+\newblock Math Biosci 162: 33--51.
+\bibAnnoteFile{Lin99}
+
 \bibitem{Gog02}
 Gog J, Grenfell B (2002) Dynamics and selection of many-strain pathogens.
 \newblock Proc Natl Acad Sci USA 99: 17209--17214.
