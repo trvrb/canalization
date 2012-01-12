@@ -86,17 +86,24 @@ Koelle K, Kamradt M, Pascual M (2009) Understanding the dynamics of rapidly
 \newblock Epidemics 1: 129--137.
 \bibAnnoteFile{Koelle09}
 
-\bibitem{Rambaut08}
-Rambaut A, Pybus OG, Nelson MI, Viboud C, Taubenberger JK, et~al. (2008) {The
-  genomic and epidemiological dynamics of human influenza A virus.}
-\newblock Nature 453: 615--619.
-\bibAnnoteFile{Rambaut08}
-
 \bibitem{BedfordBMC11}
 Bedford T, Cobey S, Pascual M (2011) Strength and temp of selection revealed in
   viral gene genealogies.
 \newblock BMC Evol Biol 11: 220.
 \bibAnnoteFile{BedfordBMC11}
+
+\bibitem{Bush99MBE}
+Bush R, Fitch W, Bender C, Cox N (1999) {Positive selection on the H3
+  hemagglutinin gene of human influenza virus A}.
+\newblock Mol Biol Evol 16: 1457--1465.
+\bibAnnoteFile{Bush99MBE}
+
+\bibitem{Wolf06}
+Wolf YI, Viboud C, Holmes EC, Koonin EV, Lipman DJ (2006) {Long intervals of
+  stasis punctuated by bursts of positive selection in the seasonal evolution
+  of influenza A virus.}
+\newblock Biol Direct 1: 34.
+\bibAnnoteFile{Wolf06}
 
 \bibitem{Park07}
 Park S, Krug J (2007) Clonal interference in large populations.
@@ -241,6 +248,12 @@ Truscott J, Fraser C, Cauchemez S, Meeyai A, Hinsley W, et~al. (2011) Essential
   influenza.
 \newblock J R Soc Interface In press.
 \bibAnnoteFile{Truscott11}
+
+\bibitem{Rambaut08}
+Rambaut A, Pybus OG, Nelson MI, Viboud C, Taubenberger JK, et~al. (2008) {The
+  genomic and epidemiological dynamics of human influenza A virus.}
+\newblock Nature 453: 615--619.
+\bibAnnoteFile{Rambaut08}
 
 \bibitem{Kucharski11}
 Kucharski A, Gog JR (2011) Influenza emergence in the face of evolutionary
