@@ -61,7 +61,7 @@
 %%% TITLE %%%
 \title{\vspace{1.0cm} \LARGE \bf Canalization of the evolutionary trajectory of the human influenza virus}
 
-\author[1,2,$\dagger$]{Trevor Bedford}
+\author[1,2,$\dagger$,*]{Trevor Bedford}
 \author[3,4]{Andrew Rambaut}
 \author[1,2]{Mercedes Pascual}
 \affil[1]{Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, USA.} 
@@ -69,6 +69,7 @@
 \affil[3]{Institute of Evolutionary Biology, University of Edinburgh, Edinburgh, UK.}
 \affil[4]{Fogarty International Center, National Institutes of Health, Bethesda, MD, USA.}
 \affil[$\dagger$]{Present address: Institute of Evolutionary Biology, University of Edinburgh, Edinburgh, UK.}
+\affil[*]{Correspondence: t.bedford@ed.ac.uk}
 \date{\today}
 
 \begin{document}
@@ -83,6 +84,10 @@
 \section*{Abstract}
 
 Since its emergence in 1968, influenza A (H3N2) has evolved extensively in genotype and antigenic phenotype.  However, despite strong pressure to evolve away from human immunity and to diversify in antigenic phenotype, H3N2 influenza shows paradoxically limited genetic and antigenic diversity present at any one time.  Here, we propose a simple model of influenza that displays rapid evolution but low standing diversity and simultaneously accounts for the epidemiological, genetic, antigenic and geographical patterns displayed by the virus.  In this model, antigenic phenotype is represented by a $N$-dimensional vector and virus mutations perturb phenotype within this continuous Euclidean space.  We implement this model in a large-scale individual-based simulation, and in doing so, find a remarkable correspondence between model behavior and observed influenza dynamics.  We find that evolution away from existing human immunity results in rapid population turnover in the influenza virus and that this population turnover occurs primarily along a single antigenic axis.  Thus, selective dynamics induce a canalized evolutionary trajectory, in which the evolutionary fate of the influenza population is surprisingly repeatable and hence, in theory, predictable.
+
+% \section*{Keywords}
+
+% influenza; antigenic drift; adaptive evolution; metapopulation structure; phylodynamics
 
 % \section*{Author Summary}
 
@@ -228,7 +233,7 @@ Infections are sampled at a rate designed to give approximately 6000 samples ove
 
 Estimating what the basic reproductive number $R_0$ for seasonal influenza would be in a naive population is notoriously difficult.  Season-to-season estimates of effective reproductive number $R$ for the USA and France gathered from mortality timeseries display an interquartile range of 0.9--1.8 \cite{Chowell08}.  Geographic spread within the USA suggests an average seasonal $R$ of 1.35 \cite{Viboud06}.  These estimates of $R$ will be lower than the $R_0$ of influenza due to the effects of human immunity.  We assumed $R_0$ of 1.8, consistent with the upper range of seasonal estimates.  Duration of infection was chosen based on patterns of viral shedding shown during challenge studies \cite{Carrat08}.  The linear form of the risk of infection and its increase as a function of antigenic distance $s$ was chosen as 0.07 based on experimental work on equine influenza \cite{Park09} and from studies of vaccine effectiveness \cite{Gupta06}.  Between-region contact rate $m$ was chosen to yield a trunk lineage that resides predominantly in the tropics.  With much higher rates of mixing, the trunk lineage ceases to show a preference the tropics, and with much lower rates of mixing, particular seasons in the north and the south will often be skipped.  The amplitude of seasonal forcing $\epsilon$ was chosen to be just large enough to get consistent fade-outs in the summer months and is consistent with empirical estimates \cite{Truscott11}.
 
-Mutational parameters were based, in part, on model behavior.  We assumed 10 amino acid sites involved in antigenicity, each mutating at a rate of $10^{-5}$ \cite{Rambaut08} to give a phenotypic mutation rate $\mu = 10^{-4}$ per infection per day.  We chose mutational effect parameters ($\textrm{mean} = 0.6$, $\textrm{sd} = 0.4$) that would give suitably fast rates of antigenic evolution corresponding to approximately 1.2 units of antigenic change per year, while simultaneously giving clustered patterns of antigenic evolution  \cite{Smith04}.  Similar outcomes are possible under a variety of parameterizations.  If mutations are more common ($\mu = 3 \times 10^{-4}$) and show less variation in effect size ($\textrm{mean} = 0.6$, $\textrm{sd} = 0.2$), then antigenic drift occurs in a more continuous fashion, resulting in less variation in seasonal incidence and a smoother distribution of antigenic phenotypes (Figure~\ref{incmaptree_smooth}).  If mutations are less common ($\mu = 5 \times 10^{-5}$) and show more variance in effect ($\textrm{mean} = 0.7$, $\textrm{sd} = 0.5$), then antigenic change occurs in a more punctuated fashion (Figure~\ref{incmaptree_rough}).  Basic reproductive number $R_0$ can be traded off with mutational parameters to some extent.  Less mutational input and higher $R_0$ will give similar patterns of antigenic drift and seasonal incidence.  Similarly, Kucharski and Gog \cite{Kucharski11} find that increasing $R_0$ results in increased rates of emergence of antigenically novel strains.
+Mutational parameters were based, in part, on model behavior.  We assumed 10 amino acid sites involved in antigenicity, each mutating at a rate of $10^{-5}$ \cite{Rambaut08} to give a phenotypic mutation rate $\mu = 10^{-4}$ per infection per day.  We chose mutational effect parameters ($\textrm{mean} = 0.6$, $\textrm{sd} = 0.4$) that would give suitably fast rates of antigenic evolution corresponding to approximately 1.2 units of antigenic change per year, while simultaneously giving clustered patterns of antigenic evolution  \cite{Smith04}.  Similar outcomes are possible under a variety of parameterizations.  If mutations are more common ($\mu = 3 \times 10^{-4}$) and show less variation in effect size ($\textrm{mean} = 0.6$, $\textrm{sd} = 0.2$), then antigenic drift occurs in a more continuous fashion, resulting in less variation in seasonal incidence and a smoother distribution of antigenic phenotypes (Figure~\ref{incmaptree_smooth}).  If mutations are less common ($\mu = 5 \times 10^{-5}$) and show more variance in effect ($\textrm{mean} = 0.7$, $\textrm{sd} = 0.5$), then antigenic change occurs in a more punctuated fashion (Figure~\ref{incmaptree_rough}).  Basic reproductive number $R_0$ can be traded off with mutational parameters to some extent.  Less mutational input and higher $R_0$ will give similar patterns of antigenic drift and seasonal incidence.  Similarly, Kucharski and Gog \cite{Kucharski12} find that increasing $R_0$ results in increased rates of emergence of antigenically novel strains.
 
 \subsection*{Antigenic map}
 

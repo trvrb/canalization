@@ -1,4 +1,4 @@
-/* canal.css from canal.tex (TeX4ht, 2012-01-12 17:10:00) */
+/* canal.css from canal.tex (TeX4ht, 2012-01-13 14:06:00) */
   body {
   min-width:100%;
   max-width:100%;
@@ -33,15 +33,15 @@ H1 {
                                                                                   
 
 H2 {
-  font-size:38px;
-}
-
-H3 {
   font-size:23px;
 }
 
-H4 {
+H3 {
   font-size:18px;
+}
+
+H4 {
+  font-size:15px;
 }
 
 P {
@@ -105,7 +105,7 @@ hr {
   border: 0;
 }
 
-img {
+img.fig {
   float:right;
   padding:18px 10px 10px 18px;
 }
@@ -115,12 +115,11 @@ img {
   line-height:18px;
   float:right;
   padding:10px 30px 15px 30px;
-  max-width:700px;
 }
 
 td {
-  min-width:100px;
-  padding:0px 25px 0px 25px;
+  /*min-width:100px;*/
+  padding:2px 15px 2px 15px;
 }
 
 .thebibliography {
@@ -128,6 +127,4 @@ td {
   line-height:18px;
 }
 
-                                                                                  
-                                                                                  
   

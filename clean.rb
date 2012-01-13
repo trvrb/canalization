@@ -15,6 +15,16 @@ contents.gsub!(/Figure\S+<a \nhref="([a-z0-9\#\-]+)">/) {"<a href=\"" + $1 + "\"
 contents.gsub!(/Table\S+<a \nhref="([a-z0-9\#\-]+)">/) {"<a href=\"" + $1 + "\">Table "}
 contents.gsub!(/Fig.\S+<a \nhref="([a-z0-9\#\-]+)">/) {"<a href=\"" + $1 + "\">Fig. "}
 contents.gsub!(/<br \/> <div class="caption"/) {"<img style=\"float:none; padding:0px;\" src=\"spanner.png\"><br><div class=\"caption\""}
+contents.gsub!(/(src=\"figures\/[a-zA-Z0-9\_\-\.]+\")/) { "class=\"fig\" " + $1 }
+contents.gsub!(/<h2/) { "<h1" }
+contents.gsub!(/<\/h2/) { "</h1" }
+contents.gsub!(/<h3/) { "<h2" }
+contents.gsub!(/<\/h3/) { "</h2" }
+contents.gsub!(/<h4/) { "<h3" }
+contents.gsub!(/<\/h4/) { "</h3" }
+contents.gsub!(/(<div class=\"author\" >)/) { $1 + "<p>"}
+#contents.gsub!(/<hr class=\"[a-zA-Z0-9\_\-\.]+\">/) { "" }
+contents.gsub!(/<p class=\"noindent\" >\s*<img/) { "<p class=\"margin\"> <img" }
 
 # Extract date
 date = ""
