@@ -1,0 +1,217 @@
+\documentclass[11pt,oneside,letterpaper]{article}
+
+\usepackage{color}
+\usepackage{geometry}
+\geometry{textwidth=6.1in}
+\geometry{textheight=8.5in}
+
+% graphics
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+% floats
+\usepackage{float}
+\usepackage[font=small,labelfont=bf,labelsep=period]{caption}
+
+% Use the PLoS provided bibtex style
+\usepackage{cite}
+%\usepackage{natbib}
+%\bibliographystyle{apalike}
+%\bibpunct[; ]{(}{)}{,}{a}{}{;}
+
+%\usepackage{setspace} 
+%\doublespacing
+
+\setlength{\parskip}{0.2cm}
+\setlength{\parindent}{0cm}
+
+%\def\response{\textbf{Response:} } 
+%\def\response{\textbullet \hspace{0.1cm} } 
+\def\comment#1{
+%\begin{sl}
+#1
+%\end{sl}
+} 
+\def\response#1{
+\begin{bf}
+#1
+\end{bf}
+} 
+
+\def\break{\vspace{0.2cm}}
+
+% comments
+\usepackage{ulem}
+\definecolor{purple}{rgb}{0.459,0.109,0.538}
+\def\tb#1#2{\sout{#1} \textcolor{purple}{#2}} 
+\def\tbc#1{\textcolor{purple}{[#1]}}
+%\definecolor{orange}{rgb}{1,0.5,0}
+%\def\sc#1#2{\sout{#1} \textcolor{orange}{#2}} 
+%\def\scc#1{\textcolor{orange}{[#1]}}
+%\definecolor{green}{rgb}{0.513,0.73,0.442} 
+%\def\mp#1#2{\sout{#1} \textcolor{green}{#2}} 
+%\def\mpc#1{\textcolor{green}{[#1]}}
+
+
+\begin{document}
+
+\setlength{\topmargin}{0.5in}
+\thispagestyle{empty}
+
+Dear Dr.\ Jarvis,
+
+\vspace{0.5cm}
+
+Thank you for the detailed reviews of our manuscript ``Canalization of the evolutionary trajectory of the human influenza virus.''  We appreciate the opportunity to revise the manuscript to address reviewer concerns.  We have included a fully revised manuscript and included below a point-by-point response to reviewer comments.
+
+Additionally, we have made the following formatting revisions as you suggested.  The abstract was revised to the \textbf{Background}, \textbf{Results} and \textbf{Conclusions} format used by BMC Biology.  The manuscript structure was consolidated with a \textbf{Results and Discussion} section followed by \textbf{Conclusions}, as is BMC style.  We moved a number of the previously ``supporting figures'' into the main text.  All the figures used to examine the primary model are now part of the main text.  However, we strongly believe that three of the figures are supplementary to the main text and their inclusion there would detract from overall readability.  These three figures represent sensitivity analyses and have been kept as supplementary information.
+
+Most changes have been textual (to clarify points raised by reviewers 2 and 3), but we have additionally included a detailed sensitivity analysis to address concerns raised by reviewer 3.  In this analysis, presented on page XXX and in a new figure 1, we examine the rate of deep branching in the phylogeny as a function of mutation rate and variance in mutation effect.  Here, we show that increasing mutation rate or mutation variance increases the probability of observing divergent antigenic lineages.  This analysis helps to explain why the model behaves as it does.  Novel antigenic types that move in the correct direction away from host immunity exclude neighboring types, but if mutation occurs too rapidly, then exclusion will not occur.
+
+We believe that these revisions have substantially improved the manuscript and hope you now find it in publishable form.
+
+\vspace{1cm}
+
+Sincerely,
+
+Trevor Bedford
+
+\pagebreak
+
+\setlength{\topmargin}{0in}
+\setcounter{page}{1}
+
+\begin{flushleft}
+{\Large
+\textbf{Reviewer responses for:}
+\textbf{``Canalization of the evolutionary trajectory of the human influenza virus''}
+}
+\\
+\textbf{Trevor Bedford,}
+\textbf{Andrew Rambaut,} 
+\textbf{Mercedes Pascual}
+\end{flushleft}
+
+Reviewer comments in plain text.  Responses follow in bold text.
+
+\subsection*{Reviewer 1}
+
+\comment{The paper ``Canalization of the evolutionary trajectory of the human influenza virus'' examines a model of epidemiological and evolutionary dynamics of the influenza virus in the human population. The paper provides, in my opinion, the most insightful and believable explanation of these dynamics to date. I have reviewed a previous version of this manuscript for another journal. Since that version, the authors have taken all my suggestions into account. This is an excellent paper that will be of interest to a broad audience of ecologists, epidemiologists, evolutionary biologists and clinicians, and highly recommend it for publication in BMC Biology as is.}
+
+\response{We thank the reviewer for taking the time to review the manuscript a second time.  We did our best to incorporate all of their suggestions in resubmitting to \textit{BMC Biology}.}
+
+\subsection*{Reviewer 2}
+
+\comment{This is an interesting agent-based epidemic simulation study that simulates evolution of H3N2 influenza virus. The following are points that I think the authors need to address in a revised version of the paper.}
+
+\comment{1. The results section should focus on Figures 1--5 rather than on the supplementary data and figures. Only two of the five figures are in the results -- the others are in the discussion. This is not a good tactic for readability.}
+
+\response{We have revised the manuscript structure to address this criticism.  Results and Discussion have been combined and supplementary figures folded in to the main text.  The revised format should significantly improve readability.}
+
+\break
+
+\comment{2. First paragraph of Results. Since Figures 4 and 5 also involve 100 replicators ``initialized'' after 40 years, does this mean that some of the data were also removed from these, as were twenty of the original 100 replicators?}
+
+\response{We apologize for the confusion caused by having two sets of 100 replicate simulations.  The experiment proceeded in two phases.  In the first phase, we conducted 100 replicate simulations starting from a single viral introduction into the host population.  Out of these simulations, 80 of the 100 showed ``canalized'' behavior.  We prepared summary statistics from only these 80 simulations.  We chose one representative simulation out of these 80 to investigate in detail.  The output of this simulation is shown in Figure 1 (now Figure 2).  In the second phase, we took the endpoint of this representative simulation as the starting point for 100 replicate simulations.  This starting point was the exact state of the simulation, including all virus strains and their frequencies and the entire host immune profile.  Figures 4 and 5 (now Figures 6 and 7) represent all 100 of these replicate simulations.}
+
+\response{We have revised the text on page XXX to state: ``We ran 100 replicate simulations, each starting from the endpoint of the representative 40-year simulation shown in figure 1.  The starting point for these replicate simulations was the exact end state of the 40-year simulation, including the frequencies of every virus strain and the entire host immune profile.''}
+
+\break
+
+\comment{3. In Figures 4 and 5, were all the parameters (e.g., antigenic drift 1.05) the same in the next four years (Fig. 4) or six years (Fig.\ 5) as they were in the first 40 years?}
+
+\response{We have revised the text to make it clear that simulation parameters were exactly the same for the initial 40-year simulation and the 100 replicate simulations.  On page XXX we state: ``These replicate simulations were run for an additional 6 years, and all evolutionary and epidemiological parameters were identical to the initial 40-year simulation.''}
+
+\comment{4. Figure 1 refers to ``noise added to each sample'' (legend). What sort of noise and why just add it? With 5,943 samples, surely there was enough sample variation that if clusters really existed, they would be seen.}
+
+\response{In the section `Antigenic map' of Methods, we had stated: ``Smith et al. find that observed measurements and measurements predicted from the map differ by an average of 0.83 antigenic units with a standard deviation of 0.67 antigenic units. We take this as a proxy for experimental noise and add jitter to each sampled antigenic phenotype by moving it in a random direction for an exponentially distributed distance with mean of 0.53 antigenic units.  If two samples with the same underlying antigenic phenotype are jittered in this fashion, the distance between them averages 0.83 antigenic units with a standard deviation of 0.64 units.''}
+
+\response{Clusters are clearly seen in the exact phenotype map in Figure 1B (now Figure 2B).  Each larger bubble and the surrounding small bubbles corresponds to an antigenic cluster.  However, when noise is added to approximate the noisy experimental map, many of these antigenic distinctions fade and a smaller number of clusters are identified.  Regardless, we provide both the exact map (Figure 2B) and the noisy map (Figure 2D), so the reader can make up their own mind about the degree of clustering.  We think it is important to illustrate the effect of measurement noise on the patterns of variability sampled from the stochastic dynamics.}
+
+\response{We have revised the text on page XXX to make this characteristic of the observed map more clear: ``The observed antigenic map of H3N2 influenza includes substantial experimental noise; replicate strains appear in diverse positions on the observed map.  By including measurement noise on antigenic locations (see Methods), we approximate an experimental antigenic map of H3N2 influenza (Figure 2D).''  The figure legend was revised to include: ``To approximate experimental noise present in the observed antigenic map of H3N2 influenza, noise was added to each sample and the resulting observations grouped into 11 clusters and colored accordingly (see Methods).''}
+
+\break
+
+\comment{5. Paragraph 2 of Discussion. I failed to see how Figure 1B related to explanation of ``punctuated antigenic evolution.''}
+
+\response{We have clarified the text on page XXX to read: ``Our model suggests that punctuated antigenic evolution need only be explained by a lack of mutational opportunity and predicts that more detailed classification of influenza strains will support a relatively small number of predominant phenotypes.  Rather than each influenza strain possessing a unique antigenic location, many strains group together with shared antigenic phenotypes (Figure 2B).''}
+
+\break
+
+\comment{6. Paragraph 2 of Discussion. What is the relation between ``experimental noise'' mentioned here and noise added to Figure 1D?}
+
+\response{We have clarified this relationship in the text on page XXX: ``We suggest that a large proportion of intra-cluster variation in the observed antigenic map is due to experimental noise, rather than each strain possessing a unique antigenic location.  The relationship between Figure 2B and Figure 2D illustrates this effect, where a large number of antigenic locations emerge from a comparatively small number of unique antigenic phenotypes.''}
+
+\break
+
+\comment{7. It is not made clear what ``starting from the endpoint of the original 40-year simulation'' means. Is the full spectrum of variation seen in the 40-year runs included in the four and six year simulations? Is the loss of repeatability due to multiple bifurcations (discontinuities), or are these removed?}
+
+\response{The 6-year replicate simulations shown in figures 4 and 5 (now figures 6 and 7) do not include the full spectrum of variation seen in the 40-year runs.  As discussed above, the starting point for these runs is the single representative 40-year simulation shown in Figure 1 (now Figure 2).  To clarify this, the text on page XXX has been revised: ``We ran 100 replicate simulations, each starting from the endpoint of the representative 40-year simulation shown in Figure 2.  The starting point for these replicate simulations was the exact end state of the 40-year simulation, including the frequencies of every viral strain present and the entire host immune profile.  These replicate simulations were run for an additional 6 years, and all evolutionary and epidemiological parameters were identical to the initial 40-year simulation.''}
+
+\break
+
+\comment{8. If 40-year prediction is relevant to observations, why would 44 or 46 year simulations be so bad? There is not enough discussion of how Figures 4 and 5, which show enormous variation around the median, are less relevant to empirical data than the first 40-year simulation.}
+
+\response{The 40-year `prediction' is relevant to observations in that the simulation produces overall patterns that are consistent with influenza dynamics.  However, the year-to-year variation of influenza is not captured.  Years that undergo antigenic transitions in the 40-year simulation do not match up with observed years of antigenic transitions.  The system is highly stochastic.  The point of the additional 100 replicate simulations discussed in the section `Winding back the tape' is to examine this level of stochasticity.  Although the overall dynamics correspond well with influenza H3N2, substantial year-to-year variability accumulates after just three years.  In other words, the objective of these simulations is to address the predictability of the dynamics in detail, over a few years, given the state of the system at a given time, and starting from the variability that would exist in the virus population at this time.  This is similar in a way to asking about predictability and the variability that arises from differences in initial conditions in a chaotic nonlinear system.  Here, we have a stochastic system and we can see how quickly the noise inherent in the dynamics would make any prediction on the future location of the virus in antigenic space impossible.}
+
+\response{To clarify our rational for this experiment we have revised the text on page XXX: ``The 40-year simulation of influenza dynamics shows broad correspondence with observed patterns. However, year-to-year details are not captured, e.g.\ years that undergo antigenic transitions in the 40-year simulation do not match up with observed years of antigenic transitions.  Over long time spans, year-to-year correspondence seems impossible to achieve in this sort of stochastic system, where evolution is often driven by chance mutations of large antigenic effect.  However, correspondence in the shorter term may be possible.  To test this, we examined repeatability in replicate simulations, showing what happens when we `wind back the tape' on the evolution of the virus.''}
+
+\break
+
+\comment{9. Is Figure 4 representative of the data if the mean is presented, but the variation is great enough that repeatability is lost by three years?}
+
+\response{Figure 4 (now Figure 6) represents stochastic variability of the model across simulations starting from exactly the same initial conditions.  Once standing genetic variation is depleting, variation across simulations increases dramatically.}
+
+\subsection*{Reviewer 3}
+
+\comment{This is a beautifully written paper that very clearly and logically demonstrates how many of the antigenic and genetic features of influenza can be recapitulated within a model that allows small perturbations within a multi-dimensional antigenic space with selection acting principally through recent exposure. That is, at any rate, how I am interpreting ``The probability that infection occurs after exposure is proportional to the distance $d$ to the closest phenotype in the host immune history. Risk of infection follows the form $\rho = \textrm{min}\{d\,s,1\}$, where $s=0.07$''. Under these circumstances, the virus population is borne along a linear trajectory in antigenic space. Although the results are mainly presented in two dimensions, it is easy to see how this principle generalizes to $n$-dimensions. What is not clear to me is the degree to which this rule captures the biology of the system. How robust is this behavior to other possible formulations?}
+
+\response{It is absolutely correct that host immunity to the most recent strain of infection (which will almost always be the `closest phenotype in the host immune history') may not completely determine host immune response.  However, departing from this assumption is a major undertaking.  Ferguson et al. \cite{Ferguson03}, Koelle et al. \cite{Koelle06} and Recker et al. \cite{Recker07} all assume cross-immunity proportional to the distance between the virus strain and the closest immune phenotype.  We would certainly agree that investigating the effects of original antigenic sin is an important aspect to modeling influenza, but we strongly feel that it is outside of the scope of the current analysis.}
+
+\response{To highlight this issue we have revised the text on page XXX to include: ``As in the current analysis, previous studies \cite{Ferguson03,Koelle06,Recker07}, have assumed that host immune response is dictated by the closest phenotype in the immune history.  Due to original antigenic sin, other phenotypes in the host immune history may have a disproportionate effect on host immunity.  This may be an important aspect to modeling influenza, and should be addressed in future studies.''}
+
+\break
+
+\comment{Does this rule really differ in effect that much from the model of Kryazhimskiy et al.?}
+
+\response{Kryazhimskiy et al. \cite{Kryazhimskiy07} use a very different cross-immunity kernel that directly favors strains along the diagonal of the 2$D$ space, unlike Gog and Grenfell \cite{Gog02} and our model, in which cross-immunity between two strains is proportional to their Euclidean distance in antigenic space.  This can be seen clearly in Figure 4 of Kryazhimskiy et al.  Our model more closely approximates how HI distance is incorporated into the Smith et al. \cite{Smith04} antigenic map; HI between strains is projected as a Euclidean distance, rather than the closest distance between strains in either dimension 1 or 2 (as Kryazhimskiy et al.\ propose).}
+
+\response{To clarify this, we have revised the text on page XXX: ``Kryazhimskiy et al. \cite{Kryazhimskiy07} use a two-dimensional strain-space, in which cross-immunity between two strains is proportional to their distance in one or dimension or the other, whichever is closer.  This cross-immunity kernel directly favors moving along a diagonal line away from previous strains.  Our model more closely approximates how HI distance is incorporated into the Smith et al. \cite{Smith04} antigenic map; HI between strains is projected as a Euclidean distance, rather than as the closest distance between strains in either dimension one or two.''}
+
+\break
+
+\comment{The authors convincingly show that their conclusions are robust to decreasing the mutation rate, but what happens when the mutational ``opportunities'' are increased?}
+
+\response{This is a very good point.  We have substantially revised the manuscript to include a new sensitivity analysis showing the effects of altering the mutation rate and the distribution of mutation size.  This analysis is presented in Figure 1 (now Figure 2) and on page XXX in the first paragraph of ``Antigenic evolution and genealogical patterns.'' We find that increasing mutation rate or mutation variance increases the probability of divergent antigenic lineages.  Thus, the two-dimensional antigenic model requires somewhat limited mutational opportunities in order for the `canalized' trajectory to occur.  We have added a cautionary note on this on page XXX: ``However, for this process to take hold, the virus population needs to be somewhat mutationally-limited; if functional antigenic variants of novel phenotype emerge too quickly, then antigenic change will occur too rapidly for competition to winnow down the virus population to a single lineage.''}
+
+\break
+
+\comment{One of the most important conclusions of this paper is that short-lived strain-transcending immunity is not essential for generating the spindly trees. The authors should be a little careful of their wording here, however. That ``there is never competition between antigenically distant clusters'' is surely because of how this model has been set up and doesn't per se support the hypothesis that ``antigenic evolution is primarily limited by a lack of mutational availability''.}
+
+\response{On further reflection, we completely agree with this assessment.  Our model generates reasonable influenza dynamics without incorporating short-lived strain-transcending immunity, but this, itself, is not evidence that ``antigenic evolution is primarily limited by a lack of mutational availability.''  We have toned down the discussion of short-lived immunity.  The text on page XXX now reads: ``In our model, one cluster leads to another cluster in orderly succession and there is never competition between antigenically distant clusters.  Thus, short-lived strain-transcending immunity is not required to limit diversity in the model.  This is not to say that short-lived strain-transcending immunity is not present; observed interference between subtypes \cite{Ferguson03,Goldstein11}, evolution at CTL epitopes \cite{Voeten00} and the exclusion of the Beijing/89 cluster by the antigenically distant Beijing/92 cluster \cite{Smith04} all suggest some form of more general interaction between influenza viruses.''}
+
+\break
+
+\comment{I'm also a little concerned by the following statement: ``However, in 20 out of the 100 replicate simulations, we observed a major bifurcation of antigenic phenotype and a consequent increase in incidence and genealogical diversity. These simulations were removed from the analysis.'' This needs to be clarified.}
+
+\response{Along with the new sensitivity analysis presented on page XXX, we clarify the criteria separating lineages with and without major bifurcations, and additionally, provide rational for conditioning the analysis on the low-diversity simulation outcomes: ``The virus persists over the course of the 40-year simulation, and at the end of most simulations, there remain only a few closely related viral lineages, indicating that genealogical diversity is restricted by evolution in the two-dimensional antigenic landscape.  Reduced diversity is substantially more common in models with less mutation or models with less variable mutation effects (Figure 1).  At higher mutation rates, viruses may move apart in antigenic phenotype too rapidly for competition to always eliminate the weaker of two diverging lineages.  Similarly, with high variance in mutational effect, there can sometimes emerge new antigenic types, too distant from the existing population to suffer limiting competitive pressure.  Both these scenarios lead to coexistence of multiple antigenic phenotypes.  We thus restrict the model to parameter regimes with lower mutation rates and lower mutation effect variances.  We primarily focus on the model with $10^{-4}$ mutations per infection per day and standard deviation of 4 antigenic units.  In this model, 80 out of the 100 replicate simulations show reduced genealogical diversity (defined as less than 9 years separating contemporaneous viruses).  We conditioned the following analysis on these 80 simulations, compiling summary statistics across this pool and presenting a detailed analysis of a single representative simulation.''}
+
+\break
+
+\comment{Also, including short term cross-immunity would probably give a better fit to the initial dynamics – which here has been avoided by giving the initial host population enough immunity ``to slow down the initial virus upswing and place the dynamics closer to their equilibrium state''. While several models fail to capture the initial dynamics correctly, it is not clear whether in this model the initial burst of diversity could prevent the emergence of a singular antigenic antigenic trajectory.}
+
+\response{The reason we started the host population off with some immunity was actually a technical one.  Starting the population off with no immunity results in a major pandemic and with $R_0$ of 1.8, about 70\% of the host population becomes infected.  After the pandemic, the virus population hits a deep trough.  With 90 million hosts in the simulation (and the virus population sustained almost entirely by the 30 million hosts in the Tropics), the virus population almost always dies out during this trough, before new antigenic phenotypes evolve.  Without implementing more detailed metapopulation structure or increasing the host population size, we cannot thoroughly investigate the initial dynamics.}
+
+\response{The fact that the population usually dies out suggests including short-term cross-immunity is not necessary to limit the evolution of diverse antigenic phenotypes during the initial phase of a pandemic.  Still, we agree that it is important for future models to successfully capture the initial evolutionary dynamics.}
+
+\response{We have revised the text on page XXX with a discussion of these issues: ``With no initial immunity in the host population, the virus undergoes a severe trough in prevalence after the initial pandemic increase.  With this number of host individuals, the virus population usually stochastically dies out during this trough.  To prevent this, we gave the initial host population enough immunity to slow down the initial virus upswing and place the dynamics closer to their equilibrium state; initial $R$ was 1.28.  Future work should attempt to more accurately model initial evolutionary dynamics.''}
+
+\break
+
+\comment{Once these points have been addressed, this paper will be a valuable addition to the existing literature on the antigenic evolution of influenza.}
+
+%%% REFERENCES %%%
+\bibliographystyle{plos}
+\bibliography{/Users/bedfordt/Documents/bedford}
+
+\end{document} 
