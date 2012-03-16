@@ -154,6 +154,18 @@ Voeten J, Bestebroer T, Nieuwkoop N, Fouchier R, Osterhaus A, et~al. (2000)
 \newblock J Virol 74: 6800--6807.
 \bibAnnoteFile{Voeten00}
 
+\bibitem{OBrien09}
+O'Brien J, Minin V, Suchard M (2009) {Learning to count: robust estimates for
+  labeled distances between molecular sequences}.
+\newblock Mol Biol Evol 26: 801--814.
+\bibAnnoteFile{OBrien09}
+
+\bibitem{Yang00}
+Yang Z (2000) Maximum likelihood estimation on large phylogenies and analysis
+  of adaptive evolution in human influenza virus a.
+\newblock Journal of Molecular Evolution 51: 423--432.
+\bibAnnoteFile{Yang00}
+
 \bibitem{GouldWonderfulLife}
 Gould S (1989) {Wonderful life}.
 \newblock Norton New York.
