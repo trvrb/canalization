@@ -1,6 +1,4 @@
-========================================================================
-Canalization of the evolutionary trajectory of the human influenza virus
-========================================================================
+# Canalization of the evolutionary trajectory of the human influenza virus
 
 There's a lot going on with the epidemiology and evolution of influenza; I've made a model that 
 attempts capture all the salient details. This includes things like the yearly attack rates, rate of 
